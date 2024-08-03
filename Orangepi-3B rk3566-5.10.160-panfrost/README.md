@@ -51,8 +51,76 @@ sudo make dtbs ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-
 Afterwards reinitate above build process. 
 `sudo ./build.sh BOARD=orangepi3b BRANCH=legacy BUILD_OPT=kernel KERNEL_CONFIGURE=no`
 
+After installing x3 `.deb` files to Opi3b using `sudo dpkg -i *.deb` next step is to get GPUY / VPU acceleration
 
+# GPU VPU aceeleration
+```
+sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
+sudo apt dist-upgrade
+sudo apt install rockchip-multimedia-config
+sudo reboot
+```
+When installing above repository terminal may indicate some missing library `v4l0xx` make sue you install it
+Afterwards
+```
+sudo apt purge chromum ffmpeg
+sudo apt install ffmpeg chromium-browser{,-l10n} chromium-codecs-ffmpeg-extra mpv vlc
+```
+# Testing
+Following benchmark will not work on `xfce` will only work in `gnome3` desktop environment
+```
+sudo apt install glmark2 glmark2-es2
+glmakr2
+```
+After launhching `chromium` visit link `chrome://flags` & enable all HW accelerated features. You can use Ctrl+F & search `accelerate` string. 
 
+- Override software rendering list
+- GPU rasterization
+- Toggle hardware accelerated H.264 video encoding for Cast Streaming
+- Toggle hardware accelerated VP8 video encoding for Cast Streaming
+- Use the MojoVideoDecoder for hardware video decoding in Pepper
+
+Restart & visit link `chrome://gpu` Following parts are important
+
+```
+Graphics Feature Status
+Canvas: Hardware accelerated
+Canvas out-of-process rasterization: Enabled
+Direct Rendering Display Compositor: Disabled
+Compositing: Hardware accelerated
+Multiple Raster Threads: Enabled
+OpenGL: Enabled
+Rasterization: Hardware accelerated on all pages
+Raw Draw: Disabled
+Video Decode: Hardware accelerated
+Video Encode: Software only. Hardware acceleration disabled
+Vulkan: Disabled
+WebGL: Hardware accelerated
+WebGL2: Hardware accelerated
+WebGPU: Disabled
+.
+.
+.
+Video Acceleration Information
+Decoding
+Decode hevc main
+48x48 to 3840x2160 pixels
+Decode hevc main 10
+48x48 to 3840x2160 pixels
+Decode hevc main still-picture
+48x48 to 3840x2160 pixels
+Decode h264 baseline
+48x48 to 3840x2160 pixels
+Decode h264 main
+48x48 to 3840x2160 pixels
+Decode h264 high
+48x48 to 3840x2160 pixels
+Decode vp8
+48x48 to 3840x2160 pixels
+Decode vp9 profile0
+48x48 to 3840x2160 pixels
+Encoding
+```
 
 
 
