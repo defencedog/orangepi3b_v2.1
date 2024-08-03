@@ -12,6 +12,7 @@ GPU: 00:02.0 VMware SVGA II Adapter
 Memory: 227MiB / 5818MiB 
 ```
 Cross-compilation, OS server-edition in a Oracle virtualbox
+
 File contents
 ```
 linux-dtb-legacy-rockchip-rk356x_1.0.6_arm64.deb
