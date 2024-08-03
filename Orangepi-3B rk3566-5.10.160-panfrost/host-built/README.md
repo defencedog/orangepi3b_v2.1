@@ -15,11 +15,9 @@ Terminal: x-terminal-emul
 CPU: (4) @ 1.800GHz 
 Memory: 1034MiB / 3923MiB 
 ```
-img: OPI official Ubuntu 22 1.0.6
+Compiled on Opi3B with Official OS `Ubuntu Jammy 1.0.6`
 
-compiled on Opi3B with Official sc
-
-File contants
+File contents
 ```
 linux-dtb-legacy-rockchip-rk356x_1.0.6_arm64.deb
 linux-headers-legacy-rockchip-rk356x_1.0.6_arm64.deb
