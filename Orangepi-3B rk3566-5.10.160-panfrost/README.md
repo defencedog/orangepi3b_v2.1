@@ -51,7 +51,8 @@ sudo make dtbs ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-
 Afterwards reinitate above build process. 
 `sudo ./build.sh BOARD=orangepi3b BRANCH=legacy BUILD_OPT=kernel KERNEL_CONFIGURE=no`
 
-After installing x3 `.deb` files to Opi3b using `sudo dpkg -i *.deb` next step is to get GPUY / VPU acceleration
+Please use Google to find how to trasnfer files to OPI3b using `scp` tool
+After installing x3 `.deb` files to Opi3b using `sudo dpkg -i *.deb` next step is to get GPU / VPU acceleration
 
 # GPU VPU aceeleration
 ```
