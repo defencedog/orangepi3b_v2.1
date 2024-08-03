@@ -5,13 +5,14 @@ Also read [official instructions](http://www.orangepi.org/orangepiwiki/index.php
 git clone https://github.com/orangepi-xunlong/orangepi-build.git -b next
 cd orangepi-build
 sudo ./build.sh
+kernel package --> show a kernel configuration menu before compilation --> orangepi-3b --> legacy Old stable / Legacy --> Show kernel Configuration menu
 ```
 ## Important notice
 The orangepi-bulid compilation system will first synchronize the Linux kernel source code with the Linux kernel source code of the github server when compiling the Linux kernel source code, so if you want to modify the Linux kernel source code, you first need to turn off the update function of the source code (you need to compile it once This function can only be turned off after the Linux kernel source code, otherwise it will prompt that the source code of the Linux kernel cannot be found. If the source code compressed package downloaded from Google cloud disk, there is no such problem, because the source code of Linux has been cached), otherwise the The changes made will be reverted as follows:
 
 `nano userpatches/config-default.conf` & set the `IGNORE_UPDATES` variable to "yes"
 
-## Changes to make
+## Changes to make 
 ```
 Device Drivers ---> Graphics support --->
 #标记：
@@ -35,7 +36,7 @@ kernel/orange-pi-5.10-rk35xx/arch/arm64/boot/dts/rockchip/rk3566-orangepi-3b-v2.
 增加第342行：interrupt-names = "gpu", "mmu", "job";
 
 ```
-You can exit `menuconfig` only after saving. 
+You can exit `menuconfig` only after saving the changes made in `nano`
 
 Build will now start & after it completes x3 `.deb` files will be located in `output/debs/`
 
