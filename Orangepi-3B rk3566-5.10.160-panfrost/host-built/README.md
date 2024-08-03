@@ -1,3 +1,4 @@
+```
 OS: Ubuntu 22.04.4 LTS aarch64 
 Host: Rockchip RK3566 OPi 3B 
 Kernel: 5.10.160-rockchip-rk356x 
@@ -13,7 +14,7 @@ Icons: LoginIcons [GTK2], Adwaita [GTK3]
 Terminal: x-terminal-emul 
 CPU: (4) @ 1.800GHz 
 Memory: 1034MiB / 3923MiB 
-
+```
 img: OPI official Ubuntu 22 1.0.6
 
 compiled on Opi3B with Official sc
