@@ -38,7 +38,7 @@ Allow the installation to complete & `sudo reboot`
 
 After reboot if above step is successfull following output must happen
 ```
-modinfo vboxguest
+$modinfo vboxguest
 filename:       /lib/modules/5.15.0-117-generic/misc/vboxguest.ko
 version:        7.0.4 r154605
 license:        GPL
