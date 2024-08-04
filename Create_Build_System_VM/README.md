@@ -35,3 +35,19 @@ Install the necessary dependencies with the command
 Change to the root user with the command `sudo su`
 Install the Guest Additions package with the command `./VBoxLinuxAdditions.run`
 Allow the installation to complete & `sudo reboot`
+
+After reboot if above step is successfull following output must happen
+```
+modinfo vboxguest
+filename:       /lib/modules/5.15.0-117-generic/misc/vboxguest.ko
+version:        7.0.4 r154605
+license:        GPL
+description:    Oracle VM VirtualBox Guest Additions for Linux Module
+author:         Oracle and/or its affiliates
+srcversion:     4F45A0842FDEE40E95D4CE2
+alias:          pci:v000080EEd0000CAFEsv00000000sd00000000bc*sc*i*
+depends:
+retpoline:      Y
+name:           vboxguest
+vermagic:       5.15.0-117-generic SMP mod_unload modversions
+```
