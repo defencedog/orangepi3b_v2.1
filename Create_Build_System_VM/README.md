@@ -30,7 +30,7 @@ sudo mount /dev/cdrom /media/cdrom
 Change into the mounted directory with the command `cd /media/cdrom`
 Install the necessary dependencies with the command 
 
-`sudo apt-get install -y dkms linux-headers-generic linux-headers-$(uname -r)`
+`sudo apt install -y dkms linux-headers-generic linux-headers-$(uname -r)`
 
 Change to the root user with the command `sudo su`
 Install the Guest Additions package with the command `./VBoxLinuxAdditions.run`
