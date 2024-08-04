@@ -43,12 +43,26 @@ You can exit `menuconfig` only after saving the changes made in `nano`
 
 Build will now start & after it completes x3 `.deb` files will be located in `output/debs/`
 
+## Compile errors
+### Solution 1
 In case of an error try following
 ```
 sudo apt install gcc-11-aarch64-linux-gnu
 cd kernel/orange-pi-5.10-rk35xx
 sudo make clean ARCH=arm64
 sudo make dtbs ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu-
+```
+
+### Solution 2
+In my case I have this persistent error
+```
+make: *** [Makefile:1304: vmlinux] Error 1
+[ error ] ERROR in function compile_kernel
+```
+
+So in `Show kernel Configuration menu` I removed Midguard support
+```
+<*> Mali Midguard series support ---> <> Mali Midguard series support
 ```
 
 Afterwards reinitate above build process. 
