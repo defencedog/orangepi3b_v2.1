@@ -1,6 +1,9 @@
 Original [Chinese instructions](https://www.bilibili.com/read/cv28853443/)
 Also read [official instructions](http://www.orangepi.org/orangepiwiki/index.php/Orange_Pi_3B#Compile_the_Linux_kernel)
 
+## Pre-requisites
+These [steps](https://github.com/defencedog/orangepi3b_v2.1/blob/main/Create_Build_System_VM/README.md) are to be completed if cross-compiling
+
 ```
 git clone https://github.com/orangepi-xunlong/orangepi-build.git -b next
 cd orangepi-build
