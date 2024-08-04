@@ -19,7 +19,7 @@ At this point you have to unmount `ubuntu-22.04.4-live-server-amd64.iso` & mount
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install build-essential  gcc-11-aarch64-linux-gnu -y
+sudo apt install build-essential  gcc-11-aarch64-linux-gnu libgmp3-dev libmpc-dev -y
 ```
 Install VirtualBox Guest Additions on a GUI-less Ubuntu server host
 Mount the CD-ROM with the command 
