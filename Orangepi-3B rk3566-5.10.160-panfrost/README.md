@@ -26,7 +26,8 @@ Device Drivers ---> Graphics support --->
 <*> Mali Bifrost series support ---> <*> Enable Mali CSF based GPU support
 ```
 
-# Warning 
+## Warning 
+### Edit .dts files 
 Before 'exiting' build script `menuconfig`; open another terminal or ssh session; `sudo nano` & modify x2 `.dts` files:
 
 ```
@@ -39,6 +40,26 @@ kernel/orange-pi-5.10-rk35xx/arch/arm64/boot/dts/rockchip/rk3566-orangepi-3b-v2.
 增加第342行：interrupt-names = "gpu", "mmu", "job";
 
 ```
+
+### Edit .dtsi file
+According to the image attached some modifications are to be done `kernel/orange-pi-5.10-rk35xx/arch/arm64/boot/dts/rockchip/rk3568.dtsi`
+
+Have to comment out `//` lines 1391、1396、1401、1406、1415、1424 having content `opp-support-hw = <0xfb 0xffff>`
+
+This will remove following `dmesg` errors
+
+```
+Jul  8 01:05:20 orangepicm4 kernel: 【    7.148588】 panfrost fde60000.gpu: clock rate = 594000000
+Jul  8 01:05:20 orangepicm4 kernel: 【    7.148608】 panfrost fde60000.gpu: bus_clock rate = 500000000
+Jul  8 01:05:20 orangepicm4 kernel: 【    7.149663】 panfrost fde60000.gpu: Looking up mali-supply from device tree
+Jul  8 01:05:20 orangepicm4 kernel: 【    7.149893】 panfrost fde60000.gpu: _of_add_opp_table_v2: no supported OPPs
+Jul  8 01:05:20 orangepicm4 kernel: 【    7.150872】 panfrost fde60000.gpu: devfreq init failed -2
+Jul  8 01:05:20 orangepicm4 kernel: 【    7.150893】 panfrost fde60000.gpu: Fatal error during GPU init
+Jul  8 01:05:20 orangepicm4 kernel: 【    7.151072】 panfrost: probe of fde60000.gpu failed with error -2
+```
+
+![bug](https://github.com/user-attachments/assets/743826e7-7642-47e7-9ba4-5bf4bda9f27e)
+
 You can exit `menuconfig` only after saving the changes made in `nano`
 
 Build will now start & after it completes x3 `.deb` files will be located in `output/debs/`
