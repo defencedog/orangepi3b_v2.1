@@ -11,7 +11,7 @@ Must enable auto-install of `Openssh`
 Partition mounted at `/` to be ~`49gb`
 
 ## SSH into VM OS
-If you have setup network-interface option `Bridge` you can see that VM OS is on LAN by typing `ip a` the `ip` address will be same as your HOST OS. Use standard `cmd` or `powershell` to interface with VM OS using `ssh <username>@ip`
+If you have setup network-interface option `Bridge` you can see that VM OS is on *LAN* by typing `ip a` the `ip` address will be on *same series* as your HOST OS. Use standard `cmd` or `powershell` to interface with VM OS using `ssh <username>@ip`
 
 ## After VM OS is up & running
 At this point you have to unmount `ubuntu-22.04.4-live-server-amd64.iso` & mount `VBoxGuestAdditions.iso` usually located in `c:\Program Files\Oracle\VirtualBox\`. For this process you have to use Virtualbox GUI 
