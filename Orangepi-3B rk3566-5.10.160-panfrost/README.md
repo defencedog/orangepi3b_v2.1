@@ -95,7 +95,7 @@ Please use Google to find how to trasnfer files to OPI3b using `scp` tool
 Remove old files & install new
 ```
 apt list --installed |grep -e ^linux-image -e ^linux-dtb -e ^linux-headers
-sudo apt pruge linux-image-xxx linux-dtb-xxx linux-headers-xxx
+sudo apt purge linux-image-xxx linux-dtb-xxx linux-headers-xxx
 sudo dpkg -i linux-image-xxx linux-dtb-xxx linux-headers-xxx
 sudo sync
 sudo reboot
