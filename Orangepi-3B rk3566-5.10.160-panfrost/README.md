@@ -90,9 +90,19 @@ Afterwards reinitate above build process.
 `sudo ./build.sh BOARD=orangepi3b BRANCH=legacy BUILD_OPT=kernel KERNEL_CONFIGURE=no`
 
 Please use Google to find how to trasnfer files to OPI3b using `scp` tool
-After installing x3 `.deb` files to Opi3b using `sudo dpkg -i *.deb` next step is to get GPU / VPU acceleration
 
-# GPU VPU aceeleration
+## On OrangePi 3b
+Remove old files & install new
+```
+apt list --installed |grep -e ^linux-image -e ^linux-dtb -e ^linux-headers
+sudo apt pruge linux-image-xxx linux-dtb-xxx linux-headers-xxx
+sudo dpkg -i linux-image-xxx linux-dtb-xxx linux-headers-xxx
+sudo sync
+sudo reboot
+```
+After installing x3 `.deb` files to Opi3b using `sudo dpkg -i *.deb` (better to move `.deb` files into a separate folder) next step is to get GPU / VPU acceleration
+
+## GPU VPU aceeleration
 ```
 sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
 sudo apt dist-upgrade
@@ -105,7 +115,46 @@ Afterwards
 sudo apt purge chromum ffmpeg
 sudo apt install ffmpeg chromium-browser{,-l10n} chromium-codecs-ffmpeg-extra mpv vlc
 ```
-# Testing
+## Testing
+Check if mali hardware is initiated
+```
+$sudo cat /var/log/kern.log |grep panfrost
+Aug  5 00:59:36 orangepi3b kernel: [   12.209009] panfrost fde60000.gpu: clock rate = 594000000
+Aug  5 00:59:36 orangepi3b kernel: [   12.209030] panfrost fde60000.gpu: bus_clock rate = 500000000
+Aug  5 00:59:36 orangepi3b kernel: [   12.209155] panfrost fde60000.gpu: Looking up mali-supply from device tree
+Aug  5 00:59:36 orangepi3b kernel: [   12.210381] panfrost fde60000.gpu: mali-g52 id 0x7402 major 0x1 minor 0x0 status 0x0
+Aug  5 00:59:36 orangepi3b kernel: [   12.210395] panfrost fde60000.gpu: features: 00000000,13de77ff, issues: 00000000,00000400
+Aug  5 00:59:36 orangepi3b kernel: [   12.210401] panfrost fde60000.gpu: Features: L2:0x07110206 Shader:0x00000002 Tiler:0x00000209 Mem:0x1 MMU:0x00002823 AS:0xff JS:0x7
+Aug  5 00:59:36 orangepi3b kernel: [   12.210406] panfrost fde60000.gpu: shader_present=0x1 l2_present=0x1
+Aug  5 00:59:36 orangepi3b kernel: [   12.212259] [drm] Initialized panfrost 1.1.0 20180908 for fde60000.gpu on minor 2
+Aug  5 01:13:31 orangepi3b kernel: [   12.155162] panfrost fde60000.gpu: clock rate = 594000000
+Aug  5 01:13:31 orangepi3b kernel: [   12.155186] panfrost fde60000.gpu: bus_clock rate = 500000000
+Aug  5 01:13:31 orangepi3b kernel: [   12.155311] panfrost fde60000.gpu: Looking up mali-supply from device tree
+Aug  5 01:13:31 orangepi3b kernel: [   12.156351] panfrost fde60000.gpu: mali-g52 id 0x7402 major 0x1 minor 0x0 status 0x0
+Aug  5 01:13:31 orangepi3b kernel: [   12.156363] panfrost fde60000.gpu: features: 00000000,13de77ff, issues: 00000000,00000400
+Aug  5 01:13:31 orangepi3b kernel: [   12.156369] panfrost fde60000.gpu: Features: L2:0x07110206 Shader:0x00000002 Tiler:0x00000209 Mem:0x1 MMU:0x00002823 AS:0xff JS:0x7
+Aug  5 01:13:31 orangepi3b kernel: [   12.156373] panfrost fde60000.gpu: shader_present=0x1 l2_present=0x1
+Aug  5 01:13:31 orangepi3b kernel: [   12.158060] [drm] Initialized panfrost 1.1.0 20180908 for fde60000.gpu on minor 2
+$ sudo cat /var/log/syslog |grep panfrost
+Aug  5 00:59:36 orangepi3b kernel: [   12.209009] panfrost fde60000.gpu: clock rate = 594000000
+Aug  5 00:59:36 orangepi3b kernel: [   12.209030] panfrost fde60000.gpu: bus_clock rate = 500000000
+Aug  5 00:59:36 orangepi3b kernel: [   12.209155] panfrost fde60000.gpu: Looking up mali-supply from device tree
+Aug  5 00:59:36 orangepi3b kernel: [   12.210381] panfrost fde60000.gpu: mali-g52 id 0x7402 major 0x1 minor 0x0 status 0x0
+Aug  5 00:59:36 orangepi3b kernel: [   12.210395] panfrost fde60000.gpu: features: 00000000,13de77ff, issues: 00000000,00000400
+Aug  5 00:59:36 orangepi3b kernel: [   12.210401] panfrost fde60000.gpu: Features: L2:0x07110206 Shader:0x00000002 Tiler:0x00000209 Mem:0x1 MMU:0x00002823 AS:0xff JS:0x7
+Aug  5 00:59:36 orangepi3b kernel: [   12.210406] panfrost fde60000.gpu: shader_present=0x1 l2_present=0x1
+Aug  5 00:59:36 orangepi3b kernel: [   12.212259] [drm] Initialized panfrost 1.1.0 20180908 for fde60000.gpu on minor 2
+Aug  5 01:13:31 orangepi3b kernel: [   12.155162] panfrost fde60000.gpu: clock rate = 594000000
+Aug  5 01:13:31 orangepi3b kernel: [   12.155186] panfrost fde60000.gpu: bus_clock rate = 500000000
+Aug  5 01:13:31 orangepi3b kernel: [   12.155311] panfrost fde60000.gpu: Looking up mali-supply from device tree
+Aug  5 01:13:31 orangepi3b kernel: [   12.156351] panfrost fde60000.gpu: mali-g52 id 0x7402 major 0x1 minor 0x0 status 0x0
+Aug  5 01:13:31 orangepi3b kernel: [   12.156363] panfrost fde60000.gpu: features: 00000000,13de77ff, issues: 00000000,00000400
+Aug  5 01:13:31 orangepi3b kernel: [   12.156369] panfrost fde60000.gpu: Features: L2:0x07110206 Shader:0x00000002 Tiler:0x00000209 Mem:0x1 MMU:0x00002823 AS:0xff JS:0x7
+Aug  5 01:13:31 orangepi3b kernel: [   12.156373] panfrost fde60000.gpu: shader_present=0x1 l2_present=0x1
+Aug  5 01:13:31 orangepi3b kernel: [   12.158060] [drm] Initialized panfrost 1.1.0 20180908 for fde60000.gpu on minor 2
+
+```
+
 Following benchmark will not work on `xfce` will only work in `gnome3` desktop environment
 ```
 sudo apt install glmark2 glmark2-es2
