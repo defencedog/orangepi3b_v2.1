@@ -109,7 +109,8 @@ sudo apt dist-upgrade
 sudo apt install rockchip-multimedia-config
 sudo reboot
 ```
-When installing above repository terminal may indicate some missing library `libv4l-rkmpp` make sue you install it
+When installing above repository terminal may indicate some missing library `libv4l-rkmpp` make sure you install it as it provides VPU acceleration for chromium
+
 Afterwards
 ```
 sudo apt purge chromum ffmpeg
