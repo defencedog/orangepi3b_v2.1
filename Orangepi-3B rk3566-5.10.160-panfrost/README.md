@@ -28,7 +28,7 @@ Device Drivers ---> Graphics support --->
 
 ## Warning 
 ### Edit .dts files 
-Before 'exiting' build script `menuconfig`; open another terminal or ssh session; `sudo nano` & modify x2 `.dts` files:
+Before 'exiting' build script `menuconfig`; open another terminal or ssh session; `sudo nano` & modify x2 `.dts` files (You have add x2 lines after `&gpu` & may have to modify `cursor-win-id` argument):
 
 ```
 kernel/orange-pi-5.10-rk35xx/arch/arm64/boot/dts/rockchip/rk3566-orangepi-3b.dts
