@@ -111,6 +111,8 @@ sudo reboot
 ```
 When installing above repository terminal may indicate some missing library `libv4l-rkmpp` make sure you install it as it provides VPU acceleration for chromium
 
+After restarting, check that `/dev/video-enc0` and `/dev/video-dec0` should exist and belong to the group "video". At the same time, the logged-in user should also have the "video" group permissions to perform hardware encoding and hard encoding.
+
 Afterwards
 ```
 sudo apt purge chromum ffmpeg
