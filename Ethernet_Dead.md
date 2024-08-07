@@ -1,7 +1,8 @@
 ## Solution 1
 Someone contacted the dev through Twitter and relayed the fix through Discord! HUGE props to LegendYang!
-run as root
+
 ```
+sudo su
 io -4 0xFDC60284 0x3f3f3f3f
 io -4 0xFDC6028C 0x003f003f
 io -4 0xFDC60298 0x3f003f00
