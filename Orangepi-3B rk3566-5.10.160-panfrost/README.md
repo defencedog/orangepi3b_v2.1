@@ -109,14 +109,14 @@ sudo apt dist-upgrade
 sudo apt install rockchip-multimedia-config
 sudo reboot
 ```
-When installing above repository terminal may indicate some missing library `libv4l-rkmpp` make sure you install it as it provides VPU acceleration for chromium
+When installing above repository terminal may indicate some missing library `libv4l-0` make sure you install it as it provides VPU acceleration for chromium
 
 After restarting, check that `/dev/video-enc0` and `/dev/video-dec0` should exist and belong to the group "video". At the same time, the logged-in user should also have the "video" group permissions to perform hardware encoding and hard encoding. This is relevant for creating VPU accelerated `Jellyfin` setup as explained in [this tutorial](https://akashrajpurohit.com/blog/setup-jellyfin-with-hardware-acceleration-on-orange-pi-5-rockchip-rk3558/) Remember device `/dev/mali0` is not there for OPi3b
 
 Afterwards
 ```
 sudo apt purge chromum ffmpeg
-sudo apt install ffmpeg chromium-browser{,-l10n} chromium-codecs-ffmpeg-extra mpv vlc
+sudo apt install ffmpeg chromium-browser{,-l10n} chromium-codecs-ffmpeg-extra mpv vlc kodi
 ```
 ## Testing
 Check if mali hardware is initiated
