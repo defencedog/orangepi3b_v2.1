@@ -104,6 +104,7 @@ After installing x3 `.deb` files to Opi3b using `sudo dpkg -i *.deb` (better to 
 
 ## GPU VPU aceeleration
 ```
+sudo apt install libv4l-0
 sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
 sudo apt dist-upgrade
 sudo apt install rockchip-multimedia-config
@@ -115,8 +116,8 @@ After restarting, check that `/dev/video-enc0` and `/dev/video-dec0` should exis
 
 Afterwards
 ```
-sudo apt purge chromum ffmpeg
-sudo apt install ffmpeg chromium-browser{,-l10n} chromium-codecs-ffmpeg-extra mpv vlc kodi
+sudo apt purge chromium ffmpeg
+sudo apt install ffmpeg chromium-browser{,-l10n} chromium-codecs-ffmpeg-extra mpv vlc kodi libvl-rkmpp
 ```
 ## Testing
 Check if mali hardware is initiated
