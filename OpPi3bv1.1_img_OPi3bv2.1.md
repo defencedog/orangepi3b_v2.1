@@ -1,5 +1,5 @@
 # Armbian GNOME Wayland on OPi3bv2.1
-
+Download only `.img.xz` on external PC & burn the image on an sdcard & then download all other files on SBC
 The following files are located in the mega.nz link
 ```
 Armbian-unofficial_24.8.0-trunk_Orangepi3b_jammy_legacy_5.10.160_gnome_desktop.img.xz
@@ -12,6 +12,8 @@ linux-headers-legacy-rockchip-rk356x_1.0.6_arm64.deb
 https://mega.nz/file/ZnxE3TjS#hJ_fKoBk9pIiod3r-rclfGVb7JB10Jhgzcv_cu-i0v0
 linux-u-boot-legacy-orangepi3b_1.0.6_arm64.deb
 https://mega.nz/file/srhyBAwL#sY_qXSP3gTtELTpeKcTah0CZbqFeC92xP-etyNtxWxE
+brcm-patchram-plus_0.1.1.tar.gz
+https://mega.nz/file/giZ2QCoJ#a6EmzE3vgoyvDGtJtjY4DS9UsfMgzQ4oln2ylYN0XqE
 ```
 As per [kernel.org](https://lore.kernel.org/linux-kernel/0318fc56-789c-47fd-8f28-1ddf1ebc1cf3@kernel.org/T/#ef90ef4d64642d5251753347cd93f7fdd22999a5f) following are changes to SBC at hardware level
 ```
@@ -101,5 +103,35 @@ Following are extracts from full output of `sudo lshw`
        configuration: broadcast=yes driver=wl driverversion=0 ip=192.168.1.23 multicast=yes wireless=IEEE 802.11
 
 ```
-So wifi is using Broadcom's `wl` driver popular in Debian distros. While `bt` is detected at hardware level, bluetooth is not working!
+So wifi is using Broadcom's `wl` driver popular in Debian distros. While `bt` is detected at hardware level but is not working!
 
+`hciconfig` command returns nothing meaning there is no BT controller available to OS
+
+`AP6256` module BT firmware are discussed at [SUNXI-OrangePI_3](https://linux-sunxi.org/Xunlong_Orange_Pi_3#Firmware_files)
+```
+For WiFi, you'll need a fw_bcm43456c5_ag.bin firmware file and nvram.txt configuration that can be found in the Xulongs's repository for H6:
+
+https://github.com/orangepi-xunlong/OrangePiH6_external/tree/master/ap6256
+Mainline brcmfmac driver expects the firmware and nvram at the following paths relative to the firmware directory:
+
+brcm/brcmfmac43456-sdio.bin
+brcm/brcmfmac43456-sdio.txt
+For Bluetooth 5.0, you'll need a BCM4345C5.hcd firmware file that can be found in the Xulongs's repository for H6:
+
+https://github.com/orangepi-xunlong/OrangePiH6_external/tree/master/ap6256
+The driver expects the firmware at the following path relative to the firmware directory:
+
+brcm/BCM4345C5.hcd
+```
+Luckily the Armbian included firmware already have required file `/lib/firmware/BCM4345C5.hcd`
+
+This tutorial at [sunplus.atlassian.net](https://sunplus.atlassian.net/wiki/spaces/doc/pages/547848193/Install+Sunplus+WiFi+BT+module+AP6256+on+SP7021+demo+board+V3) defines procedure to initiate _gpio_ attached BT `AP6256` module. It indicates an `exec` file needed for process named `brcm_patchram_plus` also it shows that _serial port_ address is needed where module is physically attached to SBC e.g `/dev/ttyS4`
+
+## Enabling Bluetooth
+In the above links `brcm-patchram-plus_0.1.1.tar.gz` file contains a single `.c` file which must be compiled using SBC compilers
+```
+tar -xvf brcm-patchram-plus_0.1.1.tar.gz
+cd brcm-patchram-plus_0.1.1
+gcc brcm_patchram_plus.c -o brcm_patchram_plus
+sudo mv brcm_patchram_plus /usr/bin
+```
