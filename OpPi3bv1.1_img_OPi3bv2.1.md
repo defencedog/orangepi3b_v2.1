@@ -169,7 +169,7 @@ fb0              i2c-1        mapper        random       tty1     tty25  tty40  
 fd               i2c-6        mem           rfkill       tty10    tty26  tty41  tty57  usb       vcsu
 ```
 
-If you observe github contents there is also a file `ap6256-wifi.service` but I have not used it because even without it my wifi is attached to _5G_ network
+If you observe github contents there is also a file `ap6256-wifi.service` but I have not used it because even without it wifi is stable
 
 Now finally reboot `sudo reboot`. After reboot this should be available
 ```
