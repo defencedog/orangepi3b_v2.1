@@ -8,5 +8,14 @@ linux-dtb-legacy-rockchip-rk356x_1.0.6_arm64.deb
 linux-headers-legacy-rockchip-rk356x_1.0.6_arm64.deb
 linux-u-boot-legacy-orangepi3b_1.0.6_arm64.deb
 ```
+### Whole procedure to be done without any reboot
 Wifi/BT of of v1.1 will not work & all modules related to it must be blacklisted & disabled. These modules start with name `sprd*`
 `sudo nano /etc/modules` comment out all `sprd*` entries by adding `#` in the beginning
+Create a new file `sudo nano /etc/modprobe.d/blacklist-orangepi3b.conf` or edit if already existing. 
+Contents to be as follows
+```
+#blacklist bcmdhd
+blacklist sprdwl_ng
+blacklist sprdbt_tty
+```
+If there are multiple `.conf` files use `cat *` to investigate all file contents
