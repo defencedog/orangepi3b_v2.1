@@ -135,3 +135,49 @@ cd brcm-patchram-plus_0.1.1
 gcc brcm_patchram_plus.c -o brcm_patchram_plus
 sudo mv brcm_patchram_plus /usr/bin
 ```
+Now we need an autorun service, located here at [github.orangepi-xunlong](https://github.com/orangepi-xunlong/orangepi-build/tree/55155f1d73cca3cf6bf42a03d7d16df2b14e8014/external/packages/bsp/sunxi)
+```
+cd /lib/systemd/system/
+sudo wget -O https://raw.githubusercontent.com/orangepi-xunlong/orangepi-build/55155f1d73cca3cf6bf42a03d7d16df2b14e8014/external/packages/bsp/sunxi/ap6256-bluetooth.service
+sudo systemctl enable ap6256-bluetooth.service
+```
+Observe this line
+```
+ExecStart=/usr/bin/brcm_patchram_plus -d --enable_hci --no2bytes --tosleep 200000 --baudrate 1500000 --patchram /lib/firmware/BCM4345C5.hcd /dev/ttyS1
+```
+You have the `brcm_patchram_plus` file in `/usr/bin` you have firmware `/lib/firmware/BCM4345C5.hcd`
+
+Ensure this _serial port_ address `/dev/ttyS1` is available
+```
+~$ ls /dev
+ashmem           full         iio:device0   mmcblk1      rga      tty11  tty27  tty42  tty58     vcs    vcsu1
+autofs           fuse         initctl       mmcblk1p1    rk_cec   tty12  tty28  tty43  tty59     vcs1   vcsu2
+block            gpiochip0    input         mpp_service  rtc      tty13  tty29  tty44  tty6      vcs2   vcsu3
+bsg              gpiochip1    kmsg          mqueue       rtc0     tty14  tty3   tty45  tty60     vcs3   vcsu4
+btrfs-control    gpiochip2    kvm           mtd0         sda      tty15  tty30  tty46  tty61     vcs4   vcsu5
+bus              gpiochip3    log           mtd0ro       sda1     tty16  tty31  tty47  tty62     vcs5   vcsu6
+cec0             gpiochip4    loop0         mtdblock0    sg0      tty17  tty32  tty48  tty63     vcs6   vcsu7
+char             gpiochip5    loop1         net          shm      tty18  tty33  tty49  tty7      vcs7   vhci
+console          hdmi_hdcp1x  loop2         null         snd      tty19  tty34  tty5   tty8      vcsa   video-dec0
+cpu_dma_latency  hidraw0      loop3         port         stderr   tty2   tty35  tty50  tty9      vcsa1  video-enc0
+crypto           hidraw1      loop4         ppp          stdin    tty20  tty36  tty51  ttyFIQ0   vcsa2  watchdog
+cuse             hidraw2      loop5         ptmx         stdout   tty21  tty37  tty52  ttyS1     vcsa3  watchdog0
+disk             hugepages    loop6         ptp0         sw_sync  tty22  tty38  tty53  ubi_ctrl  vcsa4  zero
+dma_heap         hwrng        loop7         pts          tty      tty23  tty39  tty54  uhid      vcsa5  zram0
+dri              i2c-0        loop-control  ram0         tty0     tty24  tty4   tty55  uinput    vcsa6  zram1
+fb0              i2c-1        mapper        random       tty1     tty25  tty40  tty56  urandom   vcsa7
+fd               i2c-6        mem           rfkill       tty10    tty26  tty41  tty57  usb       vcsu
+```
+
+If you observe github contents there is also a file `ap6256-wifi.service` but I have not used it because even without it my wifi is attached to _5G_ network
+
+Now finally reboot `sudo reboot`. After reboot this shoudl be available
+```
+$ hciconfig
+hci0:   Type: Primary  Bus: UART
+        BD Address: 54:78:C9:0E:17:AF  ACL MTU: 1021:8  SCO MTU: 64:1
+        UP RUNNING PSCAN ISCAN
+        RX bytes:969 acl:0 sco:0 events:75 errors:0
+        TX bytes:5526 acl:0 sco:0 commands:75 errors:0
+
+```
