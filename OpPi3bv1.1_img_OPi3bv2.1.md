@@ -13,6 +13,19 @@ https://mega.nz/file/ZnxE3TjS#hJ_fKoBk9pIiod3r-rclfGVb7JB10Jhgzcv_cu-i0v0
 linux-u-boot-legacy-orangepi3b_1.0.6_arm64.deb
 https://mega.nz/file/srhyBAwL#sY_qXSP3gTtELTpeKcTah0CZbqFeC92xP-etyNtxWxE
 ```
+As per [kernel.org](https://lore.kernel.org/linux-kernel/0318fc56-789c-47fd-8f28-1ddf1ebc1cf3@kernel.org/T/#ef90ef4d64642d5251753347cd93f7fdd22999a5f) following are changes to SBC at hardware level
+```
+Changes in v2:
+- Add DT for v2.1 hw revision, rename initial DT to v1.1:
+  - Ethernet phy io voltage: 3v3 (v1.1) / 1v8 (v2.1)
+  - Etherent reset gpios: GPIO3_C2 (v1.1) / GPIO4_C4 (v2.1)
+  - WiFi/BT: CDW-20U5622 (v1.1) / AP6256 (v2.1)
+- Rename led node and move led pinctrl props
+- Use regulator-.* nodename for fixed regulators
+- Drop rockchip,mic-in-differential prop
+- Add cap-mmc-highspeed to sdhci node
+- Add no-mmc and no-sd to sdmmc1 node
+```
 ### Whole procedure to be done without any reboot
 Load correct `dtb` file by `sudo nano /boot/armbianEnv.txt` & this is the correct line `fdtfile=rockchip/rk3566-orangepi-3b-v2.dtb`
 
@@ -37,9 +50,56 @@ sudo apt purge snapd #optional
 Install kernel headers & prerequisites
 ```
 sudo apt update
-sudo apt install libssl-dev python-is-python3
+sudo apt install libssl-dev python-is-python3 lshw
 sudo apt install ./linux-headers-legacy-rockchip-rk356x_1.0.6_arm64.deb
 ```
 above will auto run `sudo update-initramfs -u` & there can be some _missing firmware_ errors but these are not important as those devices are not on SBC
 
+Now finally reboot `sudo reboot`
+
+## Checking for WIFI & further working
+Following are extracts from full output of `sudo lshw`
+```
+  *-mmc2
+       description: MMC Host
+       physical id: 9
+       logical name: mmc2
+     *-device
+          description: SDIO Device
+          physical id: 1
+          bus info: mmc@2:0001
+          serial: 0
+          capabilities: sdio
+        *-interface:0
+             product: 43455
+             vendor: Broadcom
+             physical id: 1
+             bus info: mmc@2:0001:1
+             logical name: mmc2:0001:1
+        *-interface:1
+             product: 43455
+             vendor: Broadcom
+             physical id: 2
+             bus info: mmc@2:0001:2
+             logical name: mmc2:0001:2
+        *-bt
+             description: BlueTooth interface
+             product: 43455
+             vendor: Broadcom
+             physical id: 3
+             bus info: mmc@2:0001:3
+             logical name: mmc2:0001:3
+             capabilities: wireless bluetooth
+             configuration: wireless=BlueTooth
+ 
+  *-network:1
+       description: Wireless interface
+       physical id: 11
+       logical name: wlan0
+       serial: 54:78:c9:0e:17:ae
+       capabilities: ethernet physical wireless
+       configuration: broadcast=yes driver=wl driverversion=0 ip=192.168.1.23 multicast=yes wireless=IEEE 802.11
+
+```
+So wifi is using Broadcom's `wl` driver popular in Debian distros. While `bt` is detected at hardware level, bluetooth is not working!
 
