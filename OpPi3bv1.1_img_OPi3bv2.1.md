@@ -171,7 +171,7 @@ fd               i2c-6        mem           rfkill       tty10    tty26  tty41  
 
 If you observe github contents there is also a file `ap6256-wifi.service` but I have not used it because even without it my wifi is attached to _5G_ network
 
-Now finally reboot `sudo reboot`. After reboot this shoudl be available
+Now finally reboot `sudo reboot`. After reboot this should be available
 ```
 $ hciconfig
 hci0:   Type: Primary  Bus: UART
