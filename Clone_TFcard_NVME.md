@@ -29,7 +29,7 @@ We need to expand the capacity of the rootfs partition in the NVMe SSD
 6. Then click Apply (green √)
 
 ## Update bootloader
-1. Run `orangepi-config` (or `armbian-install` if you're using armbian)
+1. Run `sudo orangepi-config` (or `sudo armbian-install` if you're using armbian)
 2. Select boot options, then select: `Install/Update the bootloader on SPI Flash` (this will be `Install/Update the bootloader on MTD Flash` if using armbian)
 
 It may take 4 to 5 minutes to finish installing the bootloader. Once this is complete, you can remove the SD card and the device will now be able to boot directly from NVMe (SD card is no longer needed -- this is true even if you decide to re-image your NVMe SSD)
