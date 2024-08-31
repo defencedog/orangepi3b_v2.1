@@ -10,7 +10,7 @@ To stream media directly you need to mount _smb_ shares using `cifs`. Examples:
 
 ```
 mkdir ~/smb-dir/
-sudo mount -t cifs -o username=ukhan,vers=3.0 //<serverIP>/<shareDir> ~/smb-dir/
+sudo mount -t cifs -o username=<serverUser>,vers=3.0 //<serverIP>/<shareDir> ~/smb-dir/
 ```
 
 The `vers` flag is important. More on this can be found [here](https://askubuntu.com/a/1070656/110979)
