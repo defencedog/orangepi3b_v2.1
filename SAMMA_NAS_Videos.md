@@ -15,7 +15,7 @@ sudo mount -t cifs -o username=<serverUser>,vers=3.0 //<serverIP>/<shareDir> ~/s
 
 The `vers` flag is important. More on this can be found [here](https://askubuntu.com/a/1070656/110979)
 
-The above method mount _smb_ directories in read-only mode. You can mount with full-access. Also you can mount each _smb_ share on boot. Deatils are here
+The above method mount _smb_ directories in read-only mode. You can mount with full-access. Also you can mount each _smb_ share on boot. Details are here
 ```
 https://askubuntu.com/a/1050499/110979 # full access
 https://askubuntu.com/a/1067085/110979 # auto-mount on boot
