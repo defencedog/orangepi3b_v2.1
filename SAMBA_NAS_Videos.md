@@ -19,6 +19,7 @@ The `vers` flag is important. More on this can be found [here](https://askubuntu
 The above method mount _smb_ directories in read-only mode. You can mount with full-access. Also you can mount each _smb_ share on boot. Details are here
 ```
 https://askubuntu.com/a/1050499/110979 # full access
+https://ubuntu.com/server/docs/how-to-mount-cifs-shares-permanently # auto-mount on boot
 https://askubuntu.com/a/1067085/110979 # auto-mount on boot
 https://askubuntu.com/a/921143/110979 # auto-mount on boot
 ```
