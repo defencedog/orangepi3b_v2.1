@@ -181,3 +181,7 @@ hci0:   Type: Primary  Bus: UART
         TX bytes:5526 acl:0 sco:0 commands:75 errors:0
 
 ```
+
+## Test Results
+`https://www.reddit.com/r/OrangePI/comments/1f4ib0y/orangepi3b_v21_perfect_image_with_wayland_vpu_gpu/`
+1. USB that is under USB 3.0 is not working
