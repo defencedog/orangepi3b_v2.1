@@ -185,3 +185,4 @@ hci0:   Type: Primary  Bus: UART
 ## Test Results
 `https://www.reddit.com/r/OrangePI/comments/1f4ib0y/orangepi3b_v21_perfect_image_with_wayland_vpu_gpu/`
 1. USB that is under USB 3.0 is not working
+2. Audio HDMI works; but headset 3.5mm jack does not
