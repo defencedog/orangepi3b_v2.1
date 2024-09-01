@@ -2,7 +2,7 @@
 ```
 sudo nano /etc/apt/sources.list
 ```
-`Ctrl`+`\` search for -> huawei.repo | replace with ports.ubuntu press `A` to replace all occurences
+`Ctrl`+`\` search for -> huawei.repo | replace with -> ports.ubuntu then press `A` to replace all occurences
 
 Result will be
 ```
