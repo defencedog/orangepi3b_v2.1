@@ -27,6 +27,7 @@ For instance
 Create file containing Windows login details `nano ~/.smbcredentials`
 
 > username=msusername
+> 
 > password=mspassword
 
 `chmod 600 ~/.smbcredentials`
@@ -40,6 +41,7 @@ After reboot the drives are not auto-mounted & I have to manually do `sudo mount
 sudo nano /etc/rc.local
 ```
 > sleep 20 && mount -a
+> 
 > exit 0
 
 Again reboot & see the results of `sudo systemctl status rc-local.servic`. There should be no error now. `sleep 20` is added to delay 20 seconds for WIFI startup
