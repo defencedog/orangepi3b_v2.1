@@ -3,5 +3,22 @@
 ## SAMBA support
 `sudo apt install smbclinet gvfs-backends cifs-utils`
 
+## Document PDF / WPS Office
+`sudo apt install evince`
+Download _wps-fonts_ & _wps-debarm64_ from `https://drive.google.com/drive/folders/18tMUqW30NvlFCZOJv0GV1G7ym4Pg39B3`
+```
+sudo dpkg -i wps-office_11.1.0.11664_arm64.deb
+unzip wps-fonts.zip
+sudo mv *.ttf /usr/share/fonts/wps-office
+sudo mv *.TTF /usr/share/fonts/wps-office
+```
+
 ## BOX86 & WINE7.xx
 `https://github.com/neofeo/BOX86-BOX64-WINEx86-TUTORIAL`
+
+## Terminal File Manager
+download `lf` terminal filemanager `https://github.com/gokcehan/lf/releases` 
+```
+tar -xvf lf-linux-amd64.tar.gz
+sudo mv lf /usr/local/bin
+```
