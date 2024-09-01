@@ -130,8 +130,8 @@ This tutorial at [sunplus.atlassian.net](https://sunplus.atlassian.net/wiki/spac
 ## Enabling Bluetooth
 In the above links `brcm-patchram-plus_0.1.1.tar.gz` file contains a single `.c` file which must be compiled using SBC compilers
 ```
-tar -xvf brcm-patchram-plus-0.1.1.tar.gz
-cd brcm-patchram-plus_0.1.1
+tar -xvf brcm-patchram-plus_0.1.1.tar.gz
+cd brcm-patchram-plus-0.1.1
 gcc brcm_patchram_plus.c -o brcm_patchram_plus
 sudo mv brcm_patchram_plus /usr/bin
 ```
