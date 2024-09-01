@@ -24,6 +24,7 @@ https://askubuntu.com/a/1067085/110979 # auto-mount on boot
 https://askubuntu.com/a/921143/110979 # auto-mount on boot
 ```
 For instance
+
 Create file containing Windows login details `nano ~/.smbcredentials`
 
 > username=msusername
