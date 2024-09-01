@@ -23,5 +23,23 @@ https://ubuntu.com/server/docs/how-to-mount-cifs-shares-permanently # auto-mount
 https://askubuntu.com/a/1067085/110979 # auto-mount on boot
 https://askubuntu.com/a/921143/110979 # auto-mount on boot
 ```
+For instance
+Create file containing Windows login details `nano ~/.smbcredentials`
 
+> username=msusername
+> password=mspassword
 
+`chmod 600 ~/.smbcredentials`
+Add _samba_ shares via `sudo nano /etc/fstab` & I added this entry in new line. You can add more each per line
+```
+//172.168.1.14/nas_1 /media/nas_1 cifs uid=orangepi,credentials=/home/orangepi/.smbcredentials 0 0
+//172.168.1.14/nas_2 /media/nas_2 cifs uid=orangepi,credentials=/home/orangepi/.smbcredentials 0 0
+```
+After reboot the drives are not auto-mounted & I have to manually do `sudo mount -a`. To avoid it
+```
+sudo nano /etc/rc.local
+```
+> sleep 20 && mount -a
+> exit 0
+
+Again reboot & see the results of `sudo systemctl status rc-local.servic`. There should be no error now. `sleep 20` is added to delay 20 seconds for WIFI startup
