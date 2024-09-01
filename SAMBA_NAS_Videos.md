@@ -44,4 +44,4 @@ sudo nano /etc/rc.local
 > 
 > exit 0
 
-Again reboot & see the results of `sudo systemctl status rc-local.servic`. There should be no error now. `sleep 20` is added to delay 20 seconds for WIFI startup
+Again reboot & see the results of `sudo systemctl status rc-local.service`. There should be no error now. `sleep 20` is added to delay 20 seconds for WIFI startup
