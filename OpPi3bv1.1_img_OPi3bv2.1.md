@@ -130,7 +130,7 @@ This tutorial at [sunplus.atlassian.net](https://sunplus.atlassian.net/wiki/spac
 ## Enabling Bluetooth
 In the above links `brcm-patchram-plus_0.1.1.tar.gz` file contains a single `.c` file which must be compiled using SBC compilers
 ```
-tar -xvf brcm-patchram-plus_0.1.1.tar.gz
+tar -xvf brcm-patchram-plus-0.1.1.tar.gz
 cd brcm-patchram-plus_0.1.1
 gcc brcm_patchram_plus.c -o brcm_patchram_plus
 sudo mv brcm_patchram_plus /usr/bin
@@ -138,7 +138,7 @@ sudo mv brcm_patchram_plus /usr/bin
 Now we need an autorun service, located here at [github.orangepi-xunlong](https://github.com/orangepi-xunlong/orangepi-build/tree/55155f1d73cca3cf6bf42a03d7d16df2b14e8014/external/packages/bsp/sunxi)
 ```
 cd /lib/systemd/system/
-sudo wget -O https://raw.githubusercontent.com/orangepi-xunlong/orangepi-build/55155f1d73cca3cf6bf42a03d7d16df2b14e8014/external/packages/bsp/sunxi/ap6256-bluetooth.service
+sudo wget https://raw.githubusercontent.com/orangepi-xunlong/orangepi-build/55155f1d73cca3cf6bf42a03d7d16df2b14e8014/external/packages/bsp/sunxi/ap6256-bluetooth.service
 sudo systemctl enable ap6256-bluetooth.service
 ```
 Observe this line
