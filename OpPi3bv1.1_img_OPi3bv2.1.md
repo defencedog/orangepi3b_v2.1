@@ -132,6 +132,7 @@ In the above links `brcm-patchram-plus_0.1.1.tar.gz` file contains a single `.c`
 ```
 tar -xvf brcm-patchram-plus_0.1.1.tar.gz
 cd brcm-patchram-plus-0.1.1
+# you can use wget https://raw.githubusercontent.com/fredldotme/brcm-patchram-plus/master/brcm_patchram_plus.c
 gcc brcm_patchram_plus.c -o brcm_patchram_plus
 sudo mv brcm_patchram_plus /usr/bin
 ```
