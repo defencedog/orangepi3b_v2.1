@@ -5,7 +5,8 @@
 
 ## Document PDF / WPS Office
 `sudo apt install evince`
-Download _wps-fonts_ & _wps-debarm64_ from `https://drive.google.com/drive/folders/18tMUqW30NvlFCZOJv0GV1G7ym4Pg39B3`
+
+Download _wps-fonts_ & _wps-deb-arm64_ from `https://drive.google.com/drive/folders/18tMUqW30NvlFCZOJv0GV1G7ym4Pg39B3`
 ```
 sudo dpkg -i wps-office_11.1.0.11664_arm64.deb
 unzip wps-fonts.zip
