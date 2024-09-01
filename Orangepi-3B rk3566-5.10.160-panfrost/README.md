@@ -105,7 +105,7 @@ After installing x3 `.deb` files to Opi3b using `sudo dpkg -i *.deb` (better to 
 
 ## GPU VPU aceeleration
 ```
-sudo apt install libv4l-0
+sudo apt install libv4l-0 libv4l-rkmpp
 sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
 sudo apt dist-upgrade
 sudo apt install rockchip-multimedia-config
