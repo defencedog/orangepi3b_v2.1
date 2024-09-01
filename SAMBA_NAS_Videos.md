@@ -31,6 +31,7 @@ Create file containing Windows login details `nano ~/.smbcredentials`
 > password=mspassword
 
 `chmod 600 ~/.smbcredentials`
+
 Add _samba_ shares via `sudo nano /etc/fstab` & I added this entry in new line. You can add more each per line
 ```
 //172.168.1.14/nas_1 /media/nas_1 cifs uid=orangepi,credentials=/home/orangepi/.smbcredentials 0 0
