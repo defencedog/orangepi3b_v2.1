@@ -8,6 +8,7 @@
 ## rk3566-orangepi-3b-v2_jammy_6.6_official.dts
 - From _Orangepi3b_1.0.6_ubuntu_jammy_desktop_gnome_linux6.6.0-rc5.img_
 - RKNPU | WAYLAND _gnome-session_ **do not work** [Question / pastebin logs](https://askubuntu.com/questions/1525328/cannot-login-into-wayland-gnome-session-ubuntu-jammy-with-mali-gpu)
+- For `chrome` being installed using _amazingfate jammy ppa_ GPU acceleration works, VPU **do not work**
 - KODI WAYLAND _gnome-session_ works
 - HDMI / 3.5mm audio out works, microphone works
 - `panfrost` modules loads & is available in `glxinfo -B`
