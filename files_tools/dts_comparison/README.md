@@ -12,7 +12,7 @@
 - WAYLAND _gnome-session_ **do not work** Seems they have blocked it somehow! Even if you install official _server.img_ & install `ubuntu-desktop` WAYLAND _gnome-session_ do not work
 
 ## rk3566-orangepi-3b-v2_jammy_6.6_official.dts
-- From _Orangepi3b_1.0.6_ubuntu_jammy_desktop_gnome_linux6.6.0-rc5.img_
+- From [Orangepi3b_1.0.6_ubuntu_jammy_desktop_gnome_linux6.6.0-rc5.img](https://mega.nz/file/pnIT3CiZ#zVYLAZIvsKRiOaQRNwbW2WhOWLj-SKQ4aSL9SP5T680)
 - RKNPU | WAYLAND _gnome-session_ **do not work** [Question / pastebin logs](https://askubuntu.com/questions/1525328/cannot-login-into-wayland-gnome-session-ubuntu-jammy-with-mali-gpu)
 - For `chrome` being installed using [ppa:liujianfeng1994](https://github.com/defencedog/orangepi3b_v2.1/tree/main/Orangepi-3B%20rk3566-5.10.160-panfrost#gpu-vpu-aceeleration) GPU acceleration works, VPU **do not work**
 - KODI WAYLAND _gnome-session_ works, detects GBM as windowing system, HDR available is reported
