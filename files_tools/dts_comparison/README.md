@@ -21,3 +21,10 @@ sudo nano /boot/orangepiEnv.txt
 #before overlay_prefix line add this line
 fdtfile=rockchip/rk3566-orangepi-3b-v2.dtb
 ```
+
+## Armbian_community_24.8.0-trunk.495_Orangepi3b_noble_edge_6.10.2_gnome.dts
+- BT, RKNPU, Microphone **do not work**
+- HDMI / 3.5mm audio out work
+- `panfrost` under WAYLAND by default works
+### Notes
+I used `Armbian_community_24.8.0-trunk.495_Orangepi3b_noble_edge_6.10.2_gnome_desktop.img.xz` on my `OPi-3bv2.1` x2 hardware (BT & micrphone) didn't work. I editied current `dts` using `armbian-config` In `nano` from file start `Ctrl+6` then navigated to file end `Alt+/` then removed everything `Ctrl+K` & then inserted entire new `dts` (rk3566-orangepi-3b-v2_jammy_6.6_official.dts) using `Ctrl+R` rebooted & all hardware componenets were detected except RKNPU. however `wayland` was in _software rendering_ mode. `lsmod` do not have any entry of `panfrost` ... 
