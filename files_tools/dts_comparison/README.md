@@ -1,4 +1,4 @@
-# Combined experience with DTS files for different kernels
+# Combined experience with DTS files of OPi3b v2.1 for different kernels
 
 ## Armbian-unofficial_24.8.0-trunk_Orangepi3b_jammy_legacy_5.10.160_gnome.dts
 - Tutorial / links to **most usable** image [here on github](https://github.com/defencedog/orangepi3b_v2.1/blob/main/OpPi3bv1.1_img_OPi3bv2.1.md)
