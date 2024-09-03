@@ -10,8 +10,7 @@
 sudo orangepi-config
 #Go to System -> Hardware and enable the GPU & Reboot
 ```
-- BT / WIFI works
-a slight modification for BT
+- BT / WIFI works after a slight modification
 ```
 sudo nano /boot/orangepiEnv.txt
 #before overlay_prefix line add this line
