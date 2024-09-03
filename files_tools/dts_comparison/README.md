@@ -7,7 +7,7 @@
 - All other hardware components work | RKNPU, `panfrost` WAYLAND, BT, WIFI, GPU, VPU (under `chrome` from [ppa:liujianfeng1994](https://github.com/defencedog/orangepi3b_v2.1/tree/main/Orangepi-3B%20rk3566-5.10.160-panfrost#gpu-vpu-aceeleration))
 
 ## rk3566-orangepi-3b-v2_jammy_5.1_official.dts
-- From _Orangepi3b_1.0.6_ubuntu_jammy_desktop_xfce_linux5.10.160.img_
+- From [Orangepi3b_1.0.6_ubuntu_jammy_desktop_xfce_linux5.10.160.img](https://mega.nz/file/pioTXYDT#Utb--F3GsHjvvmecNCibHg9fxmpbDZNHvFzAEY-8PtQ)
 - All hardware components work
 - WAYLAND _gnome-session_ **do not work** Seems they have blocked it somehow! Even if you install official _server.img_ & install `ubuntu-desktop` WAYLAND _gnome-session_ do not work
 
