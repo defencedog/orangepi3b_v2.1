@@ -1,5 +1,10 @@
 # Combined experience with DTS files for different kernels
 
+## rk3566-orangepi-3b-v2_jammy_5.1_official.dts
+- From _Orangepi3b_1.0.6_ubuntu_jammy_desktop_xfce_linux5.10.160.img_
+- All hardware components work
+- WAYLAND _gnome-session_ **do not work** Seems they have blocked it somehow! Even if you install official _server.img_ & install `buntu-desktop` WAYLAND _gnome-session_ do not work
+
 ## rk3566-orangepi-3b-v2_jammy_6.6_official.dts
 - From _Orangepi3b_1.0.6_ubuntu_jammy_desktop_gnome_linux6.6.0-rc5.img_
 - RKNPU | WAYLAND _gnome-session_ **do not work** [Question / pastebin logs](https://askubuntu.com/questions/1525328/cannot-login-into-wayland-gnome-session-ubuntu-jammy-with-mali-gpu)
