@@ -1,7 +1,12 @@
 ## Tools to must install after drivers stuff...
 
 ## SAMBA support
-`sudo apt install smbclinet gvfs-backends cifs-utils`
+`sudo apt install smbclient gvfs-backends cifs-utils`
+
+## Hardware Identify
+```
+sudo apt install lshw
+```
 
 ## Document PDF / WPS Office
 `sudo apt install evince`
@@ -20,7 +25,7 @@ Further opimisation for WPS Office in this [github link](https://github.com/wach
 `https://github.com/neofeo/BOX86-BOX64-WINEx86-TUTORIAL`
 
 ## Terminal File Manager
-download `lf` terminal filemanager `https://github.com/gokcehan/lf/releases` 
+download `lf` terminal filemanager `https://github.com/gokcehan/lf/releases` & _Midnight Commander_
 ```
 tar -xvf lf-linux-amd64.tar.gz
 sudo mv lf /usr/local/bin
