@@ -28,6 +28,8 @@ sudo nano /boot/orangepiEnv.txt
 #before overlay_prefix line add this line
 fdtfile=rockchip/rk3566-orangepi-3b-v2.dtb
 ```
+### Notes
+Audio is working at `gdm3` but once you login after some seconds no sound devices are available though `aplay -l` corretly identifies audio sinks & sources. This software bug is [mentioned here](https://askubuntu.com/questions/132577/no-sound-in-ubuntu-except-at-log-in). Use this to [solve it](https://askubuntu.com/a/195195/110979) 
 
 ## Armbian_community_24.8.0-trunk.495_Orangepi3b_noble_edge_6.10.2_gnome.dts
 - BT, RKNPU, Microphone **do not work**
