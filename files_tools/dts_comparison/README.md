@@ -50,4 +50,4 @@ I used `Armbian_community_24.8.0-trunk.495_Orangepi3b_noble_edge_6.10.2_gnome_de
 - Audio HDMI / 3.5mm jack works; microphone works
 - `panfrost` is loaded in `lsmod` but WAYLAND works in `llvmpipe`. This happened after `sudo apt upgrade` further investigation is required
 ### Notes
-This release uses `hantro_vpu` instead of `rkmpp` previously achieved by [ppa:liujianfeng1994](https://github.com/defencedog/orangepi3b_v2.1/tree/main/Orangepi-3B%20rk3566-5.10.160-panfrost#gpu-vpu-aceeleration) thus `glmark2-es2-wayland` score 25 is very poor
+This release uses `hantro_vpu` instead of `rkmpp` previously achieved by [ppa:liujianfeng1994](https://github.com/defencedog/orangepi3b_v2.1/tree/main/Orangepi-3B%20rk3566-5.10.160-panfrost#gpu-vpu-aceeleration) thus `glmark2-es2-wayland` score 25 is very poor. To avoid this `sudo mv /etc/apt/sources.list.d/oibaf.list /etc/apt/sources.list.d/oibaf.list.disabled` then `glmark2-es2-wayland` score 481
