@@ -39,5 +39,5 @@ sudo apt install gnome-tweaks gnome-shell-extensions chrome-gnome-shell
 
 ## Text File Comparer
 ```
-sudo apt install diff meld
+sudo apt install diff meld mousepad
 ```
