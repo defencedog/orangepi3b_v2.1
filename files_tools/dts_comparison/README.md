@@ -2,7 +2,7 @@
 
 ## Armbian-unofficial_24.8.0-trunk_Orangepi3b_jammy_legacy_5.10.160_gnome.dts
 - Tutorial / links to **most usable** image [here on github](https://github.com/defencedog/orangepi3b_v2.1/blob/main/OpPi3bv1.1_img_OPi3bv2.1.md)
-- USB that is under USB 3.0 is **not working** ... will not work on it for now
+- USB2.0 that is under USB 3.0 is **not working** ... will not work on it for now
 - Audio HDMI works; but headset 3.5mm jack **does not** ... a disappointment
 - All other hardware components work | RKNPU, `panfrost` WAYLAND, BT, WIFI, GPU, VPU (under `chrome` from [ppa:liujianfeng1994](https://github.com/defencedog/orangepi3b_v2.1/tree/main/Orangepi-3B%20rk3566-5.10.160-panfrost#gpu-vpu-aceeleration))
 
