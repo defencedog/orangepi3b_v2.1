@@ -14,6 +14,7 @@ unzip wps-fonts.zip
 sudo mv *.ttf /usr/share/fonts/wps-office
 sudo mv *.TTF /usr/share/fonts/wps-office
 ```
+Further opimisation for WPS Office in this [github link](https://github.com/wachin/wps-office-all-mui-win-language)
 
 ## BOX86 & WINE7.xx
 `https://github.com/neofeo/BOX86-BOX64-WINEx86-TUTORIAL`
