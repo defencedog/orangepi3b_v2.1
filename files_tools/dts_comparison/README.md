@@ -38,6 +38,7 @@ fdtfile=rockchip/rk3566-orangepi-3b-v2.dtb
 I used `Armbian_community_24.8.0-trunk.495_Orangepi3b_noble_edge_6.10.2_gnome_desktop.img.xz` on my `OPi-3bv2.1` x2 hardware (BT & micrphone) didn't work. I editied current `dts` using `armbian-config` In `nano` from file start `Ctrl+6` then navigated to file end `Alt+/` then removed everything `Ctrl+K` & then inserted entire new `dts` (rk3566-orangepi-3b-v2_jammy_6.6_official.dts) using `Ctrl+R` rebooted & all hardware componenets were detected except RKNPU. however `wayland` was in _software rendering_ mode. `lsmod` do not have any entry of `panfrost` ... 
 
 ## Joshua_Armbian-unofficial_24.2.0-trunk_Orangepi3b_jammy_edge_6.6.4_gnome.dts
+- Image is made by Joshua-Riek available on [mega.nz](https://mega.nz/file/Fr4jGQJQ#jbpYkXb9HcIAkcS9lpKs1iIvYDGpuLw-UQjIkvWjAAU)
 - BT, RKNPU **do not work**
 - Audio HDMI / 3.5mm jack works; microphone works
 - `panfrost` is loaded in `lsmod` but WAYLAND works in `llvmpipe`
