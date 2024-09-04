@@ -22,4 +22,15 @@ download `lf` terminal filemanager `https://github.com/gokcehan/lf/releases`
 ```
 tar -xvf lf-linux-amd64.tar.gz
 sudo mv lf /usr/local/bin
+sudo apt install mc
+```
+
+## Gnome Extensions 
+```
+sudo apt install gnome-tweaks gnome-shell-extensions chrome-gnome-shell
+```
+
+## Text File Comparer
+```
+sudo apt install diff meld
 ```
