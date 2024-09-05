@@ -23,3 +23,29 @@ After a reboot run `sudo apt update && sudo apt upgrade -y` & again reboot.
 
 ## Adding missing Hardware support
 As you can see every piece of hardware is workign except BT so we will unload unnecessary _sprd*_ modules & add what are required to load BT. Plus we need to do some `dts` modification & additional `overlays` are to be provided to kernel at boot time
+### Kernel modules modification
+```
+sudo systemctl stop sprd-bluetooth
+sudo systemctl disable sprd-bluetooth
+sudo nano /etc/modules
+```
+file contents are like
+```
+#sprdbt_tty
+#sprdwl_ng
+```
+then reboot. Now if you check `lsmod` no modules with _sprd*_ are loaded. Now search for necessary Broadcom BT module. I used [OrangePi_Official_6.6.img](https://mega.nz/file/pnIT3CiZ#zVYLAZIvsKRiOaQRNwbW2WhOWLj-SKQ4aSL9SP5T680) to know necessary module names.
+
+```
+cd /lib/modules/6.6.4-edge-rockchip64/kernel/
+find -iname *btbcm* #module location
+sudo insmod ./drivers/bluetooth/btbcm.ko
+sudo nano /etc/modules
+```
+file contents are like
+```
+#sprdbt_tty
+#sprdwl_ng
+btbcm
+```
+then do `sudo update-initramfs -u` & reboot
