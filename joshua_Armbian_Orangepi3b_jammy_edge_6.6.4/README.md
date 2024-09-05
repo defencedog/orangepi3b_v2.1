@@ -1,5 +1,9 @@
 # Complete image for OPi3b v2.1
 Hurray! All hardrware components / features are running except RKNPU. This build uses bleeding edge mesa graphics that are extremely latest!
+```
+Armbian-unofficial_24.2.0-trunk_Orangepi3b_jammy_edge_6.6.4_gnome_desktop.img.xz
+https://mega.nz/file/Fr4jGQJQ#jbpYkXb9HcIAkcS9lpKs1iIvYDGpuLw-UQjIkvWjAAU
+```
 
 ## Be cautious on first boot! Don't blindly update && upgrade
 There is a buggy _mesa_ graphic driver repo that needs to be disabled. Otherwise on next boot WAYLAND will run in software rendering `llvmpipe` mode. We also need to change upgrade priorities
@@ -49,3 +53,17 @@ file contents are like
 btbcm
 ```
 then do `sudo update-initramfs -u` & reboot
+### DTB modification & Overlay addition
+Download the _dtb.tar.gz_ file included in this repo. These dtb (included dts / overlays) are extracted from official OrangePi3b v2.1 build under Kernel6.6 using official OrangePi procedure
+```
+tar -xvf dtb.tar.gz
+cd dtb/rockchip
+cp rk3566-orangepi-3b-v2_jammy_6.6_official.dts ~/
+sudo cp -R overlay/ /boot/dtb/rockchip/
+sudo nano /boot/armbianEnv.txt
+```
+Modify following line to match `overlay_prefix=rk356x` Then `sudo armbian-config` System -> DTC
+
+This will open a `nano` text editor. From the start of file press `Ctrl+6` then go to file end using `Alt+/` then cut whole file contents using `Ctrl+K`. Now insert new file in it using `Ctrl+R` then typing `/home/<user>/rk3566-orangepi-3b-v2_jammy_6.6_official.dts`. Finally `Ctrl+O` to save file & `Ctrl+X` to exit nano. Say `y` to replace existing `dtb` but `y` for a reboot. 
+
+
