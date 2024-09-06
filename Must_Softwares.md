@@ -40,3 +40,7 @@ sudo apt install gnome-tweaks gnome-shell-extensions
 ```
 sudo apt install diff meld mousepad
 ```
+## GPU Performance
+```
+sudo apt install glmark2 glamrk2-es2-wayland
+```
