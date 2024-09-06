@@ -33,9 +33,9 @@ sudo apt install mc
 
 ## Gnome Extensions 
 ```
-sudo apt install gnome-tweaks gnome-shell-extensions chrome-gnome-shell
+sudo apt install gnome-tweaks gnome-shell-extensions
 ```
-
+[clipman-lite](https://github.com/popov895/clipman-lite)
 ## Text File Comparer
 ```
 sudo apt install diff meld mousepad
