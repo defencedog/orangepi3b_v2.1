@@ -3,6 +3,7 @@ Hurray! All hardrware components / features are running except RKNPU. This build
 ```
 Armbian-unofficial_24.2.0-trunk_Orangepi3b_jammy_edge_6.6.4_gnome_desktop.img.xz
 https://mega.nz/file/Fr4jGQJQ#jbpYkXb9HcIAkcS9lpKs1iIvYDGpuLw-UQjIkvWjAAU
+
 OS: Armbian (24.2.0-trunk) aarch64
 Host: Rockchip RK3566 OPi 3B
 Kernel: 6.6.4-edge-rockchip64
