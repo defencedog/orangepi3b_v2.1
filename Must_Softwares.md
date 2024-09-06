@@ -42,5 +42,5 @@ sudo apt install diff meld mousepad
 ```
 ## GPU Performance
 ```
-sudo apt install glmark2 glamrk2-es2-wayland
+sudo apt install glmark2 glmark2-es2-wayland
 ```
