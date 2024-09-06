@@ -76,7 +76,7 @@ usbstoragequirks=0x2537:0x1066:u,0x2537:0x1068:u
 
 Then `sudo armbian-config` System -> DTC
 
-This will open a `nano` text editor. From the start of file press `Ctrl+6` then go to file end using `Alt+/` then cut whole file contents using `Ctrl+K`. Now insert new file in it using `Ctrl+R` then typing `/home/<user>/rk3566-orangepi-3b-v2_jammy_6.6_official.dts`. Finally `Ctrl+O` to save file & `Ctrl+X` to exit nano. Say `y` to replace existing `dtb` but `y` for a reboot. 
+This will open a `nano` text editor. From the start of file press `Ctrl+6` then go to file end using `Alt+/` then cut whole file contents using `Ctrl+K`. Now insert new file in it using `Ctrl+R` then typing `/home/<user>/rk3566-orangepi-3b-v2_jammy_6.6_official.dts`. Finally `Ctrl+O` to save file & `Ctrl+X` to exit nano. Say `y` to replace existing `dtb` & `y` for a reboot. 
 
 ### Tips
 Use `glxinfo -B` to be sure WAYLAND is using `panfrost`
