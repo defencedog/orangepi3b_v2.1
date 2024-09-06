@@ -38,7 +38,7 @@ Pin-Priority: 1000
 After a reboot run `sudo apt update && sudo apt upgrade -y` & again reboot. 
 
 ## Adding missing Hardware support
-As you can see every piece of hardware is workign except BT so we will unload unnecessary _sprd*_ modules & add what are required to load BT. Plus we need to do some `dts` modification & additional `overlays` are to be provided to kernel at boot time
+As you can see every piece of hardware is workign except BT [(DTS comparison here)](https://github.com/defencedog/orangepi3b_v2.1/tree/main/files_tools/dts_comparison#joshua_armbian-unofficial_2420-trunk_orangepi3b_jammy_edge_664_gnomedts) so we will unload unnecessary _sprd*_ modules & add what are required to load BT. Plus we need to do some `dts` modification & additional `overlays` are to be provided to kernel at boot time
 ### Kernel modules modification
 ```
 sudo systemctl stop sprd-bluetooth
