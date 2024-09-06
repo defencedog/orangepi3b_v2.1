@@ -74,7 +74,7 @@ cp rk3566-orangepi-3b-v2_jammy_6.6_official.dts ~/
 sudo cp -R overlay/ /boot/dtb/rockchip/
 sudo nano /boot/armbianEnv.txt
 ```
-File conetents, see the new line _overlays_ you can also use `armbian-config` to enable it 
+File contents, see the new line _overlays_ you can also use `armbian-config` to enable it 
 ```
 verbosity=1
 bootlogo=true
