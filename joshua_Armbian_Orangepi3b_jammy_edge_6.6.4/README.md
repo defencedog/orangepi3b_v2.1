@@ -62,8 +62,30 @@ cp rk3566-orangepi-3b-v2_jammy_6.6_official.dts ~/
 sudo cp -R overlay/ /boot/dtb/rockchip/
 sudo nano /boot/armbianEnv.txt
 ```
-Modify following line to match `overlay_prefix=rk356x` Then `sudo armbian-config` System -> DTC
+File conetents, see the new line _overlays_ you can also use `armbian-config` to enable it 
+```
+verbosity=1
+bootlogo=true
+overlay_prefix=rk356x
+overlays=gpu
+fdtfile=rockchip/rk3566-orangepi-3b.dtb
+rootdev=UUID=346f5f72-2605-4cdd-a025-6589741fe0a5
+rootfstype=ext4
+usbstoragequirks=0x2537:0x1066:u,0x2537:0x1068:u
+```
+
+Then `sudo armbian-config` System -> DTC
 
 This will open a `nano` text editor. From the start of file press `Ctrl+6` then go to file end using `Alt+/` then cut whole file contents using `Ctrl+K`. Now insert new file in it using `Ctrl+R` then typing `/home/<user>/rk3566-orangepi-3b-v2_jammy_6.6_official.dts`. Finally `Ctrl+O` to save file & `Ctrl+X` to exit nano. Say `y` to replace existing `dtb` but `y` for a reboot. 
 
+### Tips
+Use `glxinfo -B` to be sure WAYLAND is using `panfrost`
 
+I have to install media player `celluloid` so I have to do some modification
+```
+cd /etc/apt/sources.list.d/
+sudo mv oibaf.list.disabled oibaf.list
+sudo apt update
+sudo apt install celluloid -y
+sudo mv oibaf.list oibaf.list.disabled
+```
