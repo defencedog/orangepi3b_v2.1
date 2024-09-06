@@ -13,7 +13,9 @@ Terminal must show
 
 Use `ls /dev | grep -i dec` to get list of video decoders available
 > media-dec0
+> 
 > media-dec1
+> 
 > video-dec1
 
 Now trying this
