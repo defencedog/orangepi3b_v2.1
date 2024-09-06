@@ -32,4 +32,5 @@ nano mpv.conf
 ```
 file contents
 > vo=gpu
+> 
 > hwdec=auto
