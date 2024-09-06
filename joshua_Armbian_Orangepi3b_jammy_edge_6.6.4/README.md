@@ -15,6 +15,7 @@ Terminal: /dev/ttyS2
 CPU: (4) @ 1.800GHz
 Memory: 711MiB / 3672MiB
 ```
+<img src="Sample.png" width="500" />
 
 ## Be cautious on first boot! Don't blindly update && upgrade
 There is a buggy _mesa_ graphic driver repo that needs to be disabled. Otherwise on next boot WAYLAND will run in software rendering `llvmpipe` mode. We also need to change upgrade priorities
