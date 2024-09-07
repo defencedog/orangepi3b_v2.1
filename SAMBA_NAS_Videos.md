@@ -1,6 +1,10 @@
 ## Playing Videos & Media on SAMBA NAS
 
-You can mount _samba_ shares within _nautilus_ after installing these tools `sudo apt install smbclient gvfs-backends cifs-utils` however you will not be able to stream media from _smplayer_ or _vlc_ because default `ffmpeg` is not compiled with _smb_ protocol support.
+You can mount _samba_ shares within _nautilus_ after installing these tools 
+```
+sudo apt install smbclient gvfs-backends cifs-utils
+```
+however you will not be able to stream media from _smplayer_ or _vlc_ because default `ffmpeg` is not compiled with _smb_ protocol support.
 
 `ffmpeg -hide_banner -protocols` don't show any `smb` entry, this is where `cifs-utils` are needed. More on this on armbian forum's [here](https://forum.armbian.com/topic/29719-media-players-not-playing-files-over-smb-is-ffmpeg-compiled-without-networking-support/?do=findComment&comment=170553)
 
