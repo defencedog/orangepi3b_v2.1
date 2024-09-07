@@ -93,6 +93,8 @@ This will open a `nano` text editor. From the start of file press `Ctrl+6` then 
 ## Tips
 Use `glxinfo -B` to be sure WAYLAND is using `panfrost`
 
+Test score of `glmark2-es2-wayland` is 480
+
 I have to install media player `celluloid` so I have to do some modification
 ```
 cd /etc/apt/sources.list.d/
