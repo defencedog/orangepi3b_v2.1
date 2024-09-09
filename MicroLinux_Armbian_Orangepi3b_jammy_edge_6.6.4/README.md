@@ -105,4 +105,4 @@ sudo mv oibaf.list oibaf.list.disabled
 ```
 ## Limitations
 - RKNPU is not working
-- Because we are running mainline kernel, not Rockchip kernel thus no `mpp` support. This means that VPU acceleration is limited to H264 codec not H265 codec
+- Because we are running mainline kernel, not Rockchip kernel thus no `rkmpp` support. This means that VPU acceleration is limited to H264 codec not H265 codec
