@@ -10,4 +10,4 @@ sudo dpkg -i linux-image-xxx linux-dtb-xxx linux-headers-xxx
 sudo sync
 sudo reboot
 ```
-Above x3 are minimum requirements for properly updating kernel If your image is booting succesffuly no need to update `u-boot` just update the new `v2.1`` dtb by following [instruction here](https://github.com/defencedog/orangepi3b_v2.1/tree/main/files_tools/vendor_Kernel6.1/Overclocked_dtb#using-this-dtb) 
+Above x3 are minimum requirements for properly updating kernel If your image is booting succesffuly no need to update `u-boot` just update the new `v2.1` dtb by following [instruction here](https://github.com/defencedog/orangepi3b_v2.1/tree/main/files_tools/vendor_Kernel6.1/Overclocked_dtb#using-this-dtb) 
