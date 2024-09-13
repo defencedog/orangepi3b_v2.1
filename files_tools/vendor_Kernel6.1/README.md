@@ -26,3 +26,5 @@ sudo sync
 sudo reboot
 ```
 Above x3 are minimum requirements for properly updating kernel If your image is booting successfully no need to update `u-boot` just update the new `v2.1` dtb by following [instruction here](https://github.com/defencedog/orangepi3b_v2.1/tree/main/files_tools/vendor_Kernel6.1/Overclocked_dtb#using-this-dtb) 
+
+Better **not** to install `linux-libc-dev-vendor-rk35xx` & keep default package `linux-libc-dev`. I have observed noticeable degradation in `glmark2-es2-wayland` tests
