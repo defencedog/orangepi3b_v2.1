@@ -36,3 +36,6 @@ file contents
 > vo=gpu
 > 
 > hwdec=auto
+
+## Saving & loading MPV settings in Celluloid
+[AskUbntu comment](https://askubuntu.com/a/1330777) is ore than enough...
