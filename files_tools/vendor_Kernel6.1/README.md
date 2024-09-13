@@ -1,5 +1,5 @@
 # Here are `debs` & patches for Vendor Kernel 6.1
-The above files can convert your existing Linux platform into a powerful media streaming device. The latest vendor kernel will enble H265 / H264 video decoding. RKNPU is also a useful feature to use. However 3.5mm audio out / microphone is **not working**
+The following files can convert your existing Linux platform into a powerful media streaming device. The latest vendor kernel will enble H265 / H264 video decoding. RKNPU is also a useful feature to use. However 3.5mm audio out / microphone is **not working**
 
 ```
 armbian-bsp-cli-orangepi3b-vendor_24.11.0-trunk_arm64__1-PC9787-V0202-H2670-B199a-R89c9.deb
