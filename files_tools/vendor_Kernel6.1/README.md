@@ -22,6 +22,8 @@ apt list --installed |grep -e ^linux-image -e ^linux-dtb -e ^linux-headers
 sudo apt purge linux-image-xxx linux-dtb-xxx linux-headers-xxx
 sudo apt install libssl-dev python-is-python3
 sudo dpkg -i linux-image-xxx linux-dtb-xxx linux-headers-xxx
+sudo nano /boot/armbianEnv.txt
+> fdtfile=rockchip/rk3566-orangepi-3b-v2.1.dtb
 sudo sync
 sudo reboot
 ```
