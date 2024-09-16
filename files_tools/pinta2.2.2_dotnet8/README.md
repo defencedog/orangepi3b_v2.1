@@ -8,7 +8,7 @@ nano /bin/pinta
 # edit this line
 > prefix=/usr/local
 # move all folder to $PREFIX/local
-sudo cp -R * /usr/local
+sudo mv -R * /usr/local
 ```
 
 Now you can run Pinta! Icon will also be placed on Gnome launcher
