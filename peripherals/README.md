@@ -1,4 +1,6 @@
 # Peripherals I bought 
+To make modules for any peripheral to be attached with SBC it is compulsory to install kernel heders. If you are making Armbian or any other OS `.img` during compile time pass this flag `HEADERS_INSTALL=yes` 
+
 ## BT / WIFI 
 The onboard Broadcom AP6256 BT / WIFI chip has good WIFI but poor BT especially for audio streaming; for general purpose keyboard / mouse connectivity it's OK. AP6256 discovers my 5.0GHz WIFI but connection is very unstable. It is stable at 2.5GHz
 
