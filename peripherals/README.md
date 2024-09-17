@@ -42,6 +42,8 @@ To make changes permanent `sudo nano /lib/udev/rules.d/40-usb_modeswitch.rules` 
 
 > ATTR{idVendor}=="0bda", ATTR{idProduct}=="1a2b", RUN+="/usr/sbin/usb_modeswitch -K -v 0bda -p 1a2b"
 
+then `sudo reboot`. This dongle creates boot time problem aforementioned!
+
 To see if default BT & USB BT / WIFI are active
 ```
 ukhan@orangepi3b:~$ hciconfig
