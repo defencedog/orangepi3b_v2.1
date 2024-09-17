@@ -96,5 +96,7 @@ Per my experience [this driver](https://github.com/morrownr/8821cu-20210916) is 
 git clone https://github.com/morrownr/8821cu-20210916
 sudo sh remove-driver.sh
 sudo sh install-driver.sh
+sudo dkms status
+# rtl8821cu/5.12.0.4, 6.1.75-vendor-rk35xx, aarch64: installed
 sudo reboot
 ```
