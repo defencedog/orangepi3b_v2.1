@@ -26,7 +26,7 @@ Both the USB chips will work with above kernel module with full functionality i.
 Preferred for right device
 
 
-This device when connected to SBC has x2 modes a bootable USB mode & WIFI / BT dongle module. Due to the first mode **you may not be able to boot the SBC if it is connected at boot time**. When the SBC is running & you plug it in `lsusb` outputs
+This device when connected to SBC has [x2 modes](https://github.com/morrownr/8821cu-20210916/issues/92) a bootable USB mode & WIFI / BT dongle module. Due to the first mode **you may not be able to boot the SBC if it is connected at boot time**. When the SBC is running & you plug it in `lsusb` outputs
 > Bus 007 Device 002: ID 0bda:1a2b Realtek Semiconductor Corp. RTL8188GU 802.11n WLAN Adapter (Driver CDROM Mode)
 
 To switch its mode to dongle we have to do
