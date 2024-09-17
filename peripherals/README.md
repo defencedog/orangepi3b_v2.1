@@ -1,4 +1,5 @@
-## Peripherals I bought BT / WIFI 
+# Peripherals I bought 
+## BT / WIFI 
 The onboard Broadcom AP6256 BT / WIFI chip has good WIFI but poor BT especially for audio streaming; for general purpose keyboard / mouse connectivity it's OK. AP6256 discovers my 5.0GHz WIFI but connection is very unstable. It is stable at 2.5GHz
 
 <img src="BT-WIFI.jpg" width="500" />
@@ -7,6 +8,8 @@ I bought both of these the blue one [left] is BT4.X & WIFI 2.5GHz while the gree
 
 You can see WIFI connection information using `iwconfig`
 
+### Old WIFI / BT kernel module 
+Preferred for left device
 ```
 https://github.com/et020598/rtl8723du
 
@@ -16,3 +19,7 @@ sudo insmod /lib/modules/$(uname -r)/kernel/drivers/bluetooth/rtk_btusb.ko
 reboot
 ```
 Both the USB chips will work with above kernel module with full functionality i.e WIFI / BT, however, 5.0GHz WIFI is again unstable
+
+### New WIFI / BT kernel module
+Preferred for right device
+
