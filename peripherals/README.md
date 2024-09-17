@@ -91,4 +91,10 @@ scan on
 add 28:C2:DD:1D:37:C4
 trust 28:C2:DD:1D:37:C4
 ```
-
+Per my experience [this driver](https://github.com/morrownr/8821cu-20210916) is more stable when it comes to WIFI 5.0GHz
+```
+git clone https://github.com/morrownr/8821cu-20210916
+sudo sh remove-driver.sh
+sudo sh install-driver.sh
+sudo reboot
+```
