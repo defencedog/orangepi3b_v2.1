@@ -30,7 +30,7 @@ This device when connected to SBC has x2 modes a bootable USB mode & WIFI / BT d
 To switch its mode to dongle we have to do
 ```
 sudo apt install usb-modeswitch
-v:p values from above output
+# v:p values from above output
 sudo usb_modeswitch -KW -v 0bda -p 1a2b
 ```
 then `lsusb` outputs
