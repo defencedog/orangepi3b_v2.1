@@ -33,9 +33,9 @@ cd ~/.config/mpv
 nano mpv.conf
 ```
 file contents
-> vo=gpu
-> 
+> vo=gp
 > hwdec=auto
+> af=lavfi=[loudnorm]
 
 ## Saving & loading MPV settings in Celluloid
 [AskUbuntu comment](https://askubuntu.com/a/1330777) is more than enough...
