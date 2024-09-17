@@ -83,7 +83,7 @@ lo: unmanaged
 
 ```
 
-Now you can use `bluetoothctl` to issue commands & select each BT device separately & add devices to these BT controllers separately because Gnome dont provide a separate BT panel GUI as is is the case with WIFI. For instance look for commands 
+Now you can use `bluetoothctl` to issue commands & select each BT device separately & add devices to these BT controllers separately because Gnome don't provide a separate BT panel GUI as is is the case with WIFI. For instance look for commands 
 ```
 select 90:DE:80:17:E3:AE
 scan on
