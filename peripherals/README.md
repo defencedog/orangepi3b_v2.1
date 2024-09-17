@@ -61,7 +61,7 @@ wlx90de8017e3ad: connected to khan 5G_Plus_5G # <- EXTERNAL DONGLE
         "Realtek Wi-Fi"
         wifi (rtw_8821cu), 90:DE:80:17:E3:AD, hw, mtu 1500
         ip4 default
-        inet4 192.168.1.21/24
+        inet4 xxx
         route4 default via xxx metric 600
         route4 xxx metric 600
         inet6 fe80::9d6c:40d9:7c35:de53/64
