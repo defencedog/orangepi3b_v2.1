@@ -37,7 +37,7 @@ then `lsusb` outputs
 > Bus 007 Device 003: ID 0bda:c820 Realtek Semiconductor Corp. 802.11ac NIC
 
 To make changes permanent `sudo nano /lib/udev/rules.d/40-usb_modeswitch.rules` add following before `LABEL="modeswitch_rules_end"`
-> # Realtek 8211GU Wifi
+
 > ATTR{idVendor}=="0bda", ATTR{idProduct}=="1a2b", RUN+="/usr/sbin/usb_modeswitch -K -v 0bda -p 1a2b"
 
 To see if default BT & USB BT / WIFI are active
