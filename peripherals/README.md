@@ -87,10 +87,12 @@ lo: unmanaged
 
 Now you can use `bluetoothctl` to issue commands & select each BT device separately & add devices to these BT controllers separately because Gnome don't provide a separate BT panel GUI as is the case with WIFI. For instance look for commands 
 ```
+list
+# show x2 BT controllers
 select 90:DE:80:17:E3:AE
 scan on
 # list of devices
-add 28:C2:DD:1D:37:C4
+pair 28:C2:DD:1D:37:C4
 trust 28:C2:DD:1D:37:C4
 ```
 Per my experience [this driver](https://github.com/morrownr/8821cu-20210916) is more stable when it comes to WIFI 5.0GHz
