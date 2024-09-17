@@ -1,4 +1,7 @@
 ## Peripherals I bought BT / WIFI 
+
+<img src="BT_WIFI.jpg" width="500" />
+
 ```
 https://github.com/et020598/rtl8723du
 
