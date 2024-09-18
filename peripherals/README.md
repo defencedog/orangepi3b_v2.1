@@ -6,7 +6,7 @@ The onboard Broadcom AP6256 BT / WIFI chip has good WIFI but poor BT especially 
 
 <img src="BT-WIFI.jpg" width="500" />
 
-I bought both of these the blue one [left] is BT4.X & WIFI 2.5GHz while the green one [right] is BT5.X & WIFI 5.0GHz. Buy the **right** one as the BT / WIFI is superb just use USB3 port to plug it for stability. 
+I bought both of these the blue one [left] is BT4.X & WIFI 2.5GHz while the green one [right] is BT4.X & WIFI 5.0GHz. Buy the **right** one as the BT / WIFI is superb just use USB3 port to plug it for stability. BT versions can be identified [AskUbuntu](https://askubuntu.com/a/591813)
 
 You can see WIFI connection information using `iwconfig`
 
