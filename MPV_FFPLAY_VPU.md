@@ -10,7 +10,7 @@ https://wiki.pine64.org/wiki/Mainline_Hardware_Decoding
 H265 10bit acceleration is not supported (I am getting a bluescreen), however, H265 8bit (or lower) acceleration is supported. 
 ### Using CLI
 ```
-mpv --vo=gpu --hwdec=auto video.mp4
+mpv --vo=gpu --hwdec=rkmpp video.mp4
 ```
 Terminal must show
 > VO: [gpu] XxY drm_prime[nv12]
@@ -37,9 +37,9 @@ cd ~/.config/mpv
 nano mpv.conf
 ```
 file contents
-> vo=gp
+> vo=gpu
 > 
-> hwdec=auto
+> hwdec=rkmpp
 > 
 > af=lavfi=[loudnorm]
 
