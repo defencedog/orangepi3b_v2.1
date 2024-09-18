@@ -7,7 +7,7 @@ https://wiki.postmarketos.org/wiki/Hardware_video_acceleration
 https://wiki.pine64.org/wiki/Mainline_Hardware_Decoding
 ```
 ## MPV VPU
-H265 10bit acceleration is not supported (I am getting a bluescreen), however, H265 8bit (or lower) acceleration is supported. 
+H265 10bit acceleration is not supported (I am getting a bluescreen `[vo/gpu] Initializing texture for hardware decoding failed.`), however, H265 8bit (or lower) acceleration is supported. 
 ### Using CLI
 ```
 mpv --vo=gpu --hwdec=rkmpp video.mp4
