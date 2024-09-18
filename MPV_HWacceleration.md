@@ -1,4 +1,6 @@
 # Hardware VPU acceleration for RK3566
+You must be using vendor kernel 5.x or 6.x instead of mainline kernel. For this to work use `jammy` release with [this ppa](https://github.com/defencedog/orangepi3b_v2.1/blob/main/Orangepi-3B%20rk3566-5.10.160-panfrost/README.md#gpu-vpu-acceleration) packages installed
+
 VPU acceleration information
 ```
 https://wiki.postmarketos.org/wiki/Hardware_video_acceleration
