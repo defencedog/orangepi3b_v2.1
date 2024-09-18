@@ -103,7 +103,7 @@ sudo reboot
 ```
 After installing x3 `.deb` files to Opi3b using `sudo dpkg -i *.deb` (better to move `.deb` files into a separate folder) next step is to get GPU / VPU acceleration
 
-## GPU VPU aceeleration
+## GPU VPU acceleration
 ```
 sudo apt install libv4l-0 libv4l-rkmpp
 sudo add-apt-repository ppa:liujianfeng1994/rockchip-multimedia
