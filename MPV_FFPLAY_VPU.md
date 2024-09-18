@@ -65,6 +65,7 @@ $ffmpeg -decoders | grep rkmpp
 Use this command `ffplay -vcodec hevc_rkmpp video.mp4` To make things easier `nano ~/.bash_profile` Add following lines to `.bash_profile` You can add more aliases or customise a shorter name
 
 > alias ffplay264="ffplay -vcodec h264_rkmpp"
+> 
 > alias ffplay265="ffplay -vcodec hevc_rkmpp"
 
 Then you can just `ffplay265 video.mp4`
