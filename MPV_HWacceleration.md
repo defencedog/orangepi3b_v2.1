@@ -1,10 +1,12 @@
-# Hardware acceleration for RK3566
-HEVC X265 acceleration is not supported. More on this here
+# Hardware VPU acceleration for RK3566
+VPU acceleration information
 ```
 https://wiki.postmarketos.org/wiki/Hardware_video_acceleration
 https://wiki.pine64.org/wiki/Mainline_Hardware_Decoding
 ```
-## Using CLI
+## MPV VPU
+H265 10bit acceleration is not supported (I am getting a bluescreen), however, H265 8bit (or lower) acceleration is supported. 
+### Using CLI
 ```
 mpv --vo=gpu --hwdec=auto video.mp4
 ```
@@ -37,5 +39,5 @@ file contents
 > hwdec=auto
 > af=lavfi=[loudnorm]
 
-## Saving & loading MPV settings in Celluloid
+### Using GUI Celluloid
 [AskUbuntu comment](https://askubuntu.com/a/1330777) is more than enough...
