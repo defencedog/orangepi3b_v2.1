@@ -38,7 +38,9 @@ nano mpv.conf
 ```
 file contents
 > vo=gp
+> 
 > hwdec=auto
+> 
 > af=lavfi=[loudnorm]
 
 ### Using GUI Celluloid
