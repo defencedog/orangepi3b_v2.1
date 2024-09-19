@@ -8,6 +8,8 @@ https://wiki.pine64.org/wiki/Mainline_Hardware_Decoding
 ```
 ## MPV VPU
 H265 10bit acceleration is not supported (I am getting a bluescreen `[vo/gpu] Initializing texture for hardware decoding failed.`), however, H265 8bit (or lower) acceleration is supported. 
+
+**Update:** This [issue is resolved](https://github.com/nyanmisaka/ffmpeg-rockchip/issues/109#issuecomment-2359644474) You need to add `--vf=scale_rkrga=force_yuv=8bit` or permanently add it in `mpv.conf`
 ### Using CLI
 ```
 mpv --vo=gpu --hwdec=rkmpp video.mp4
