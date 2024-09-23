@@ -91,3 +91,17 @@ mouse Rclick      seek to percentage in file corresponding
 ```
 ### Using GUI
 Cannot find any :( Please write to me if you have an idea
+
+### FFPLAY as Youtube GUI
+Before purge `yt-dlp` if installed via repos because its outdated
+```
+sudo apt purge yt-dlp -y
+sudo apt autoremove -y
+pip install -U yt-dlp
+
+# Know available formats, generally 232 for 720p & 270 for 1080p
+yt-dlp --list-formats <URL>
+# ffplay264 alias created before for HW acceleration
+ffplay264 $(yt-dlp -f 270 -s -g "<URL>") -autoexit -loglevel quiet
+```
+Now you can use aforementioned keyboard shortcuts & to navigate the video use Rclick on screen
