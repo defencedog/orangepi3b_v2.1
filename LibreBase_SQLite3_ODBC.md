@@ -14,7 +14,7 @@ cat /etc/odbcinst.ini
 cat /usr/share/sqliteodbc/unixodbc.ini
 ```
 ## Database settings
-This file user needs to create & add information about `.db` location & type of driver to be used `nano /etc/odbc.ini`
+This file user needs to create & add information about `.db` location & type of driver to be used `nano /etc/odbc.ini` You can add multiple entries referring to different `.db` Do use a unique name & description
 ```
 [ukhan]
 Description=SQLITE3 BMR
@@ -23,3 +23,9 @@ Database=/home/ukhan/electrolyser_db/bmr_2012.db
 # optional lock timeout in milliseconds
 Timeout=2000
 ```
+## Using within LibreBase
+At launch time
+> Connect to existing database
+> From drop-down list select ODBC
+> Click Browse & entry name ukhan will be there
+> Number of entries & names depend on `/etc/odbc.ini`
