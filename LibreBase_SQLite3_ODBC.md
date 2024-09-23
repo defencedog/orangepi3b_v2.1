@@ -26,6 +26,9 @@ Timeout=2000
 ## Using within LibreBase
 At launch time
 > Connect to existing database
+> 
 > From drop-down list select ODBC
+> 
 > Click Browse & entry name ukhan will be there
+> 
 > Number of entries & names depend on `/etc/odbc.ini`
