@@ -99,9 +99,10 @@ sudo apt purge yt-dlp -y
 sudo apt autoremove -y
 pip install -U yt-dlp
 
-# Know available formats, generally 232 for 720p & 270 for 1080p
+# Know available formats i.e resolution & vcodec used maybe av1 or vp9 or h264
+# <CODEC> can be anyone from $ffmpeg -decoders | grep rkmpp
 yt-dlp --list-formats <URL>
-# ffplay264 alias created before for HW acceleration
-ffplay264 $(yt-dlp -f 270 -s -g "<URL>") -autoexit -loglevel quiet
+ffplay -vcodec <CODEC> $(yt-dlp -f 270 -s -g <URL>) -autoexit -loglevel quiet
 ```
+
 Now you can use aforementioned keyboard shortcuts & to navigate the video use _Rclick_ on screen. You can remove `-loglevel quiet` if you want to see information related to `fd=` (frames dropped)
