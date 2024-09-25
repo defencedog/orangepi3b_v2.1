@@ -111,4 +111,5 @@ If above dongle remained plugged in USB boot will stuck at _Scanning for btrfs f
 ```
 sudo apt purge btrfs-progs # this will auto update initramfs otherwise
 sudo update-initramfs -u # may not be needed
+sudo poweroff # unplug / replug USB & then power on
 ```
