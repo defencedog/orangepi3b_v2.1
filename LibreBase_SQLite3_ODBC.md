@@ -13,6 +13,12 @@ Driver file settings referring necessary libraries are mentioned below. You can 
 cat /etc/odbcinst.ini
 cat /usr/share/sqliteodbc/unixodbc.ini
 ```
+For many applications like WPS Office or WINE default location of libraries must be respected thus create symlinks
+```
+sudo ln -s /usr/lib/aarch64-linux-gnu/odbc/libsqlite3odbc.so /usr/lib/libsqlite3odbc.so
+sudo ln -s /usr/lib/aarch64-linux-gnu/libodbc.so.2 /usr/lib/libodbc.so
+```
+
 ## Database settings
 This file user needs to create & add information about `.db` location & type of driver to be used `nano /etc/odbc.ini` You can add multiple entries referring to different `.db` Do use a unique name & description
 ```
