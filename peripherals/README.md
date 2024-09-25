@@ -106,3 +106,9 @@ sudo dkms status
 # rtl8821cu/5.12.0.4, 6.1.75-vendor-rk35xx, aarch64: installed
 sudo reboot
 ```
+### Removing the Boot Bug 
+If above dongle remained plugged in USB boot will stuck at _Scanning for btrfs filesystems_ The [solution](https://ubuntuforums.org/showthread.php?t=2481847) is 
+```
+sudo apt purge btrfs-progs # this will auto update initramfs otherwise
+sudo update-initramfs -u # may not be needed
+```
