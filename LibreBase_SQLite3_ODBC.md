@@ -38,3 +38,13 @@ At launch time
 > Click Browse & entry name ukhan will be there
 > 
 > Number of entries & names depend on `/etc/odbc.ini`
+
+## Using within WPS Excel
+At launch time
+> Data Tab
+>
+> Import Data
+>
+> OBDC / DSN
+>
+> Number of entries & names depend on `/etc/odbc.ini`
