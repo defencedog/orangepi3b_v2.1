@@ -42,6 +42,8 @@ file contents
 > vo=gpu
 > 
 > hwdec=rkmpp
+>
+> vf=scale_rkrga=force_yuv=8bit
 > 
 > af=lavfi=[loudnorm]
 
