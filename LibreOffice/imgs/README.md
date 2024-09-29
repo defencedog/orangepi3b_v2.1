@@ -1,0 +1,1 @@
+# Screenshots to elaborate tutorials
