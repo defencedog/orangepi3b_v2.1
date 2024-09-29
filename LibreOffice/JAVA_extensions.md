@@ -9,3 +9,10 @@ sudo apt install openjdk-8-jre libreoffice-java-common libunoloader-java
 ```
 Then you will be able to get legacy extensions to work with Librecalc
 
+Ensure that Libreoffice detects correct JAVA vesion. If you have multiple choose `1.8x` 
+
+<img src="imgs/jre_1.8.png" width="500" />
+
+Non-linear solver plugin working
+
+<img src="imgs/nonlinear_solv.png" width="500" />
