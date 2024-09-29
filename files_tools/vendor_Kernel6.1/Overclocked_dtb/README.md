@@ -22,5 +22,5 @@ To be done by adding `bash -c 'echo "performance" > /sys/devices/platform/fdf802
 ## For JoshuaRiek Ubuntu Rockchip
 THere is no config utility, thus you can simply do
 ```
-udo wget -O /usr/lib/firmware/6.1.0-1025-rockchip/device-tree/rockchip/rk3566-orangepi-3b.dtb "https://github.com/defencedog/orangepi3b_v2.1/raw/refs/heads/main/files_tools/vendor_Kernel6.1/Overclocked_dtb/rk3566-orangepi-3b-v2.1.dtb"
+sudo wget -O /usr/lib/firmware/$(uname -r)/device-tree/rockchip/rk3566-orangepi-3b.dtb "https://github.com/defencedog/orangepi3b_v2.1/raw/refs/heads/main/files_tools/vendor_Kernel6.1/Overclocked_dtb/rk3566-orangepi-3b-v2.1.dtb"
 ```
