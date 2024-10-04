@@ -71,3 +71,4 @@ cd "${HERE}"
 export MONO_WINFORMS_XIM_STYLE=disabled
 GTK2_RC_FILES=/usr/share/themes/Raleigh/gtk-2.0/gtkrc exec mono "${HERE}//Solver.exe" "$@"
 ```
+See also [Libreoffice engineering](https://github.com/defencedog/orangepi3b_v2.1/tree/main/LibreOffice) extensions in this repo
