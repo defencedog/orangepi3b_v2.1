@@ -33,9 +33,14 @@ sudo apt install mc
 
 ## Gnome Extensions 
 ```
-sudo apt install gnome-tweaks gnome-shell-extensions
+sudo apt install gnome-tweaks gnome-shell-extensions gnome-shell-extension-manager
 ```
 [clipman-lite](https://github.com/popov895/clipman-lite)
+[vitals](https://github.com/corecoding/Vitals)
+[dash-to-dock](https://github.com/micheleg/dash-to-dock)
+[workspaces-indicator](https://github.com/MichaelAquilina/improved-workspace-indicator)
+
+Use `dconf-editor` to disable animations in GNOME. Use _extension-manager_ GUI to install above extensions
 ## Text File Comparer
 ```
 sudo apt install diff meld mousepad
