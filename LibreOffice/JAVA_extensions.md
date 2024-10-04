@@ -2,6 +2,11 @@
 
 With new JAVA runtimes old extensions are losing comptability with Libreoffice. For instance in the `extensions` folder of this repo you will find non-linea solver extension & multiple chemical engineering extensions. After upgrading to `noble` from `jammy` they stopped working because JAVA runtimes became updated
 
+To install libreoffice suite
+```
+sudo apt install -y libreoffice libreoffice-java-common libunoloader-java libreoffice-gtk3 libreoffice-gnome libreoffice-script-provider-python
+```
+
 ## Legacy JAVA runtime
 Install following
 ```
