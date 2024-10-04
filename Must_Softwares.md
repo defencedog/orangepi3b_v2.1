@@ -30,7 +30,6 @@ tar -xvf lf-linux-amd64.tar.gz
 sudo mv lf /usr/local/bin
 sudo apt install mc
 ```
-
 ## Gnome Extensions 
 ```
 sudo apt install gnome-tweaks gnome-shell-extensions gnome-shell-extension-manager
@@ -39,13 +38,36 @@ sudo apt install gnome-tweaks gnome-shell-extensions gnome-shell-extension-manag
 [vitals](https://github.com/corecoding/Vitals)
 [dash-to-dock](https://github.com/micheleg/dash-to-dock)
 [workspaces-indicator](https://github.com/MichaelAquilina/improved-workspace-indicator)
+[app-indicator](https://github.com/ubuntu/gnome-shell-extension-appindicator)
 
 Use `dconf-editor` to disable animations in GNOME. Use _extension-manager_ GUI to install above extensions
 ## Text File Comparer
 ```
-sudo apt install diff meld mousepad
+sudo apt install diff meld mousepad featherpad
 ```
 ## GPU Performance
 ```
 sudo apt install glmark2 glmark2-es2-wayland
+```
+## Education & Engineering
+```
+sudo apt install mono-complete python-is-python3 python3-pip
+pip install coolprop ht fluids pyromat forallpeople handcalcs numpy sympy scipy matplotlib ipython jupyter 
+```
+Use custom builts for Geogebra 5 & [SMATH Studio Mono](https://smath.com/en-US/view/SMathStudio/download)
+```
+GeoGebra-Linux-Portable-5-2-857-0.7z
+https://mega.nz/file/4yYF0ZZC#kyJ_LkrDCaoumNFatvDTyeSsTxjs1eY1P_gmEeHoEaA
+```
+Edit `geogebra5.desktop` to suite your file locations then `Exec` & `Icon` entry
+```
+sudo cp geogebra5.desktop /usr/share/applications
+```
+For SMath use following for `smathstudio_desktop_mono`
+```
+#!/bin/sh
+HERE="$(dirname "$(readlink -f "${0}")")"
+cd "${HERE}"
+export MONO_WINFORMS_XIM_STYLE=disabled
+GTK2_RC_FILES=/usr/share/themes/Raleigh/gtk-2.0/gtkrc exec mono "${HERE}//Solver.exe" "$@"
 ```
