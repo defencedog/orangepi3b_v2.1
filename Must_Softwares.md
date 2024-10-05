@@ -45,21 +45,23 @@ Use `dconf-editor` to disable animations in GNOME. Use _extension-manager_ GUI t
 ```
 sudo apt install diff meld mousepad featherpad
 ```
-## GPU Performance
+## GPU / VPU Performance
+Use `apt-cache policy ffmpeg mpv` to ensure they are installed from a [specific ppa](https://launchpad.net/~liujianfeng1994/+archive/ubuntu/rockchip-multimedia) [Configure media players](https://github.com/defencedog/orangepi3b_v2.1/blob/main/MPV_FFPLAY_VPU_Youtube.md) for HW accelerated video playback 
+
 ```
 sudo apt install glmark2 glmark2-es2-wayland
 ```
 ## Education & Engineering
 ```
 sudo apt install mono-complete python-is-python3 python3-pip
-pip install coolprop ht fluids pyromat forallpeople handcalcs numpy sympy scipy matplotlib ipython jupyter 
+pip install coolprop ht fluids pyromat forallpeople handcalcs numpy sympy scipy matplotlib ipython jupyter --break-system-packages
 ```
 Use custom builts for Geogebra 5 & [SMATH Studio Mono](https://smath.com/en-US/view/SMathStudio/download)
 ```
 GeoGebra-Linux-Portable-5-2-857-0.7z
 https://mega.nz/file/4yYF0ZZC#kyJ_LkrDCaoumNFatvDTyeSsTxjs1eY1P_gmEeHoEaA
 ```
-Edit `geogebra5.desktop` to suite your file locations then `Exec` & `Icon` entry
+Edit `geogebra5.desktop` to suite your file locations -> `Exec` & `Icon` entries
 ```
 sudo cp geogebra5.desktop /usr/share/applications
 ```
