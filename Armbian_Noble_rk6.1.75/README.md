@@ -5,7 +5,7 @@
 - Audio devices names are corrected
 
 ## Bugs NOT resolved
-- Microphone / audio capture using 3.5mm jack not working (this is woring in [mainline kernel here](https://github.com/defencedog/orangepi3b_v2.1/tree/main/MicroLinux_Armbian_Orangepi3b_jammy_edge_6.6.4))
+- Microphone / audio capture using 3.5mm jack not working (this is working in [mainline kernel here](https://github.com/defencedog/orangepi3b_v2.1/tree/main/MicroLinux_Armbian_Orangepi3b_jammy_edge_6.6.4))
 
 ## What works
 Every piece of hardware -> GPU, NPU, OpenCL (Rusticl), all USB x4 ports, NVME, LEDs, GPIO
