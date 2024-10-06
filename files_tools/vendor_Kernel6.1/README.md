@@ -1,3 +1,5 @@
+# Deprected latest [bug fixed edition here](https://github.com/defencedog/orangepi3b_v2.1/tree/main/Armbian_Noble_rk6.1.75)
+
 # Here are `debs` & patches for Vendor Kernel 6.1
 The following files can convert your existing Linux platform into a powerful media streaming device. The latest vendor kernel will enble H265 / H264 video decoding. RKNPU is also a useful feature to use. However 3.5mm audio out / microphone is **not working**
 
