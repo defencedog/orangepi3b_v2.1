@@ -36,6 +36,7 @@ https://mega.nz/file/5vhDlTgI#fAorGTxzz_aXeYzBIRLEN05Vbe4RuNjWrHdhjjXBIog
 ## Custom Overclocked DTB
 Added in this repo. Overwrite at `/boot/dtb/rockchip/` If you are not using current `u-boot` (that latest automatically identifies SBC version) you can modify `/boot/armbianEnv.txt` & add `fdtfile=rockchip/<file.dtb>`
 
+What is changed in OC refer [detailed information here](https://github.com/defencedog/orangepi3b_v2.1/tree/main/files_tools/vendor_Kernel6.1/Overclocked_dtb)
 
 
 
