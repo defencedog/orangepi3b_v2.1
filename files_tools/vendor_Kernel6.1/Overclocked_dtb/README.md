@@ -12,6 +12,7 @@ The `dtb` to be placed in `/boot/dtb-6.1.75-vendor-rk35xx/rockchip` & to be refe
 ```
 sudo watch -n 2 cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq
 sudo watch -n 2 cat /sys/devices/platform/fdf80200.rkvdec/devfreq/fdf80200.rkvdec/cur_freq
+sudo watch -n 2 cat /sys/kernel/debug/rkrga/load #VPU loading
 ```
 ## CPU Overclocking
 To be done using `sudo armbian-config` System -> CPU (Reboot required)
