@@ -5,3 +5,4 @@ Make sure you have following prerequisites
 ```
 sudo apt install -y pandoc poppler-utils ffmpeg ripgrep fzf
 ```
+After extracting archive you can move `rga*` binaries to `/usr/local/bin`
