@@ -3,6 +3,7 @@
 ## Bugs resolved
 - Audio out not coming from 3.5mm jack [pull request](https://github.com/armbian/build/pull/7330#issuecomment-2392746104)
 - Audio devices names are corrected
+- Clean shutdown (no LED activity)
 
 ## Bugs NOT resolved
 - Microphone / audio capture using 3.5mm jack not working (this is working in [mainline kernel here](https://github.com/defencedog/orangepi3b_v2.1/tree/main/MicroLinux_Armbian_Orangepi3b_jammy_edge_6.6.4))
