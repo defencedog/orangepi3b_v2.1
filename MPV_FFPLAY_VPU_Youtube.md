@@ -106,6 +106,7 @@ pip install -U yt-dlp
 yt-dlp --list-formats <URL>
 ffplay -vcodec <CODEC> $(yt-dlp -f 270 -s -g <URL>) -autoexit -loglevel quiet
 ```
+Now you can use aforementioned keyboard shortcuts & to navigate the video use _Rclick_ on screen. You can remove `-loglevel quiet` if you want to see information related to `fd=` (frames dropped)
 
 ### FFPLAY as Media Player
 Create any named `<file>.sh` file `/home/<user>/.local/share/nautilus/scripts` & make it executable via `chmod +x <file>.sh` Contents will be as follows [The script will auto detect correct video type & select appropriate codec]
@@ -127,4 +128,4 @@ ffplay -vcodec "$FILE_EXT"_rkmpp "$FILE_NAME"
 
 ```
 
-Now you can use aforementioned keyboard shortcuts & to navigate the video use _Rclick_ on screen. You can remove `-loglevel quiet` if you want to see information related to `fd=` (frames dropped)
+
