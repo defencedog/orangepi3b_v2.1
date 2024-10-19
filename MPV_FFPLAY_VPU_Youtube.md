@@ -123,7 +123,7 @@ FILE_NAME=($NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
 IFS=$IFS_BAK
 
 FILE_EXT=$(ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of default=noprint_wrappers=1:nokey=1 "$FILE_NAME")
-zenity --info --title="Video Codec Used" --text="$ukhan"_rkmpp
+zenity --info --title="Video Codec Used" --text="$FILE_EXT"_rkmpp
 ffplay -vcodec "$FILE_EXT"_rkmpp "$FILE_NAME"
 
 ```
