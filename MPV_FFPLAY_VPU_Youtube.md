@@ -107,4 +107,24 @@ yt-dlp --list-formats <URL>
 ffplay -vcodec <CODEC> $(yt-dlp -f 270 -s -g <URL>) -autoexit -loglevel quiet
 ```
 
+### FFPLAY as Media Player
+Create any named `<file>.sh` file `/home/<user>/.local/share/nautilus/scripts` & make it executable via `chmod +x <file>.sh` Contents will be as follows [The script will auto detect correct video type & select appropriate codec]
+```
+#! /bin/bash
+set -e
+set -u
+set -o pipefail
+
+# For handling file names with spaces
+IFS_BAK=$IFS
+IFS=$'\t\n'
+FILE_NAME=($NAUTILUS_SCRIPT_SELECTED_FILE_PATHS)
+IFS=$IFS_BAK
+
+FILE_EXT=$(ffprobe -v error -select_streams v:0 -show_entries stream=codec_name -of default=noprint_wrappers=1:nokey=1 "$FILE_NAME")
+zenity --info --title="Video Codec Used" --text="$ukhan"_rkmpp
+ffplay -vcodec "$FILE_EXT"_rkmpp "$FILE_NAME"
+
+```
+
 Now you can use aforementioned keyboard shortcuts & to navigate the video use _Rclick_ on screen. You can remove `-loglevel quiet` if you want to see information related to `fd=` (frames dropped)
