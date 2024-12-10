@@ -118,7 +118,7 @@ It is important to setup network connection & network interface (device) priorit
 
 <img src="network_priority.png" width="500" />
 
-In the above figure I am setting priority of ocnnection & selecting which device to use to connect it. `wlan0` is built-in Broadcom chip.
+In the above figure I am setting priority of connection & selecting which device to use to connect it. `wlan0` is built-in Broadcom chip.
 
 > 100 -> high priority
 > 
