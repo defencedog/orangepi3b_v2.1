@@ -113,3 +113,15 @@ sudo apt purge btrfs-progs # this will auto update initramfs otherwise
 sudo update-initramfs -u # may not be needed
 sudo poweroff # unplug / replug USB & then power on
 ```
+### Network priority 
+It is important to setup network connection & network interface (device) priority, otherwise, WIFI will be unstable. Use GNOME hidden utility `nm-connection-editor`
+
+<img src="network_priority.png" width="500" />
+
+In the above figure I am setting priority of ocnnection & selecting which device to use to connect it. `wlan0` is built-in Broadcom chip.
+
+> 100 -> high priority
+> 
+> 80 -> average priority
+> 
+> 60 -> lower priority
