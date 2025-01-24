@@ -1,5 +1,7 @@
 # Compiling QCAD within Armbian Wayland
 
+<img src=QCAD_COMPILED_About.png width="300" />
+
 Just use `qmake` tools from repository instead of compiling yourself. Compiling under RK3566 took ~11 hours. Be patient
 
 ## Host machine
@@ -80,4 +82,30 @@ qmake -r CONFIG+=ractivated
 make release
 cd release
 QT_QPA_PLATFORM=xcb LD_LIBRARY_PATH=. ./qcad-bin
+```
+## Precompiled 7z archive
+
+You can downloac x4 parts & extract these. For ease of use you can do following steps which will give you a nicer way to launch / integrate QCAD with Armbian GNOME
+
+After creating / editing each file do `chmod +x launcher.sh` & `chmod +x qcad.desktop`
+
+_launcher.sh_ (your locations may change)
+```
+cd /home/ukhan/Binaries/qcad-3.31.2.0_aarch64/release
+QT_QPA_PLATFORM=xcb LD_LIBRARY_PATH=. ./qcad-bin
+```
+_qcad.desktop_ in `~/.local/share/applications` (your `Icon` location will change, also better to make `Terminal=true` for debugging)
+```
+[Desktop Entry]
+Name=QCAD
+GenericName=CAD Software
+Comment[en]=System 2D CAD
+Exec=qcad %F
+X-MultipleArgs=true
+Icon=/home/ukhan/Binaries/qcad-3.31.2.0_aarch64/scripts/qcad_icon.svg
+Terminal=false
+Type=Application
+Categories=Graphics;VectorGraphics;Engineering;Construction;2DGraphics;Science;
+MimeType=application/dxf;image/vnd.dxf;
+StartupNotify=true
 ```
