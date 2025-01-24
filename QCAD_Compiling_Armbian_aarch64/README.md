@@ -1,6 +1,6 @@
 # Compiling QCAD within Armbian Wayland
 
-Just use `qmake` tools from repository instead of compiling yourself
+Just use `qmake` tools from repository instead of compiling yourself. Compiling under RK3566 took ~11 hours. Be patient
 
 ## Host machine
 ```
@@ -50,12 +50,32 @@ It must be noticed that I installed many packages listed under _Debian_ in order
 ```
 sudo apt install libqt5opengl5-dev libqt5opengl5t64 qtscript5-dev libqt5designer5 qttools5-dev qtwayland5 qtwayland5-dev-tools qt5-image-formats-plugins qt5-qmake qtbase5-dev qtbase5-dev-tools libqt5svg5-dev libqt5webenginewidgets5 libqt5webchannel5-dev qtwebengine5-dev libglu1-mesa-dev libfreetype6-dev libfontconfig1-dev libssl-dev libdbus-1-dev libsm-dev libqt5script5 libqt5script5 libqt5concurrent5t64
 ```
+## Modifying source code
+Downloading QCAD source
+```
+wget https://github.com/qcad/qcad/archive/v3.31.2.0.zip
+unzip v3.31.2.0.zip
+cd qcad-3.31.2.0/
+```
+Check your `qmake` version
+```
+$ qmake -v
+QMake version 3.1
+Using Qt version 5.15.13 in /usr/lib/aarch64-linux-gnu
+```
+Modifications as follows are needed because compile projects located at `qcad-3.31.2.0/src/3rdparty` may not include QT that Armbian uses. In this location there will be many folders each having one _project_ file for each respective QT version. Contents of file are same for 5.xx
+```
+cd qcad-3.31.2.0/src/3rdparty
+mv qt-labs-qtscriptgenerator-5.15.8 qt-labs-qtscriptgenerator-5.15.13 #folder rename matching your qmake version
+cd qt-labs-qtscriptgenerator-5.15.13
+mv qt-labs-qtscriptgenerator-5.15.8.pro qt-labs-qtscriptgenerator-5.15.13.pro #file rename matching your qmake version
+```
 
 ## Configure & Compile QCAD
 
 Under `wayland` I got `egl` related error while launching QCAD. Resolved via prepending `QT_QPA_PLATFORM=xcb` as [instructed here](https://github.com/flathub/net.sourceforge.Chessx/issues/5#issuecomment-568793891)
 ```
-cd ~/qcad
+cd qcad-3.31.2.0/
 qmake -r CONFIG+=ractivated
 make release
 cd release
