@@ -1,6 +1,6 @@
 # Compiling QCAD within Armbian Wayland
 
-<img src=QCAD_COMPILED_About.png width="300" />
+<img src=QCAD_COMPILED_About.png width="500" />
 
 Just use `qmake` tools from repository instead of compiling yourself. Compiling under RK3566 took ~11 hours. Be patient
 
@@ -83,11 +83,12 @@ make release
 cd release
 QT_QPA_PLATFORM=xcb LD_LIBRARY_PATH=. ./qcad-bin
 ```
-## Precompiled 7z archive
+## Precompiled archive Community Edition
 
-You can downloac x4 parts & extract these. For ease of use you can do following steps which will give you a nicer way to launch / integrate QCAD with Armbian GNOME
+You can download x4 parts & extract these. For ease of use you can do following steps which will give you a nicer way to launch / integrate QCAD with Armbian GNOME
 
 After creating / editing each file do `chmod +x launcher.sh` & `chmod +x qcad.desktop`
+Create global symlink for _launcher.sh_ `sudo ln -s launcher.sh /usr/local/bin/qcad` (use absolute paths for _launcher.sh_)
 
 _launcher.sh_ (your locations may change)
 ```
@@ -109,3 +110,6 @@ Categories=Graphics;VectorGraphics;Engineering;Construction;2DGraphics;Science;
 MimeType=application/dxf;image/vnd.dxf;
 StartupNotify=true
 ```
+## Precompiled archive Pro Edition Trial
+Mentioned in [this thread](https://www.qcad.org/rsforum/viewtopic.php?t=11239) is the trial version. I successfully launched it under Armbian; bit sluggish though
+> https://qcad.org/archives/qcad/qcad-3.31.2.5-trial-linux-qt6-arm64.tar.gz
