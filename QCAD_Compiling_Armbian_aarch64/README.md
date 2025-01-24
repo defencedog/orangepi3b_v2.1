@@ -1,4 +1,4 @@
-# Compiling QCAD within Armbian
+# Compiling QCAD within Armbian Wayland
 
 Just use `qmake` tools from repository instead of compiling yourself
 
@@ -45,8 +45,19 @@ In the [official link](https://www.qcad.org/en/component/content/article/78-qcad
 > 
 > libglu1-mesa-dev libfreetype6-dev libfontconfig1-dev libssl-dev libdbus-1-dev libsm-dev gcc make libx11-dev libxext-dev libxrender-dev libglu1-mesa-dev libfreetype6-dev libfontconfig1-dev libssl-dev libdbus-1-dev libsm-dev qt5-qmake qt5-default libqt5svg5-dev libqt5script5 libqt5help5 libqt5designer5 libqt5scripttools5 qtscript5-dev qtxmlpatterns5-dev-tools libqt5xmlpatterns5 libqt5xmlpatterns5-dev libqt5designer5 python3-pyside2.qtuitools libqscintilla2-qt5-designer libqt5designer5 qttools5-dev qt5-image-formats-plugins qtwayland5 qtwayland5-dev-tools libqt5waylandclient5
 
-Packages I installed:
+It must be noticed that I installed many packages listed under _Debian_ in order for successful compile. Packages I installed:
 
 ```
 sudo apt install libqt5opengl5-dev libqt5opengl5t64 qtscript5-dev libqt5designer5 qttools5-dev qtwayland5 qtwayland5-dev-tools qt5-image-formats-plugins qt5-qmake qtbase5-dev qtbase5-dev-tools libqt5svg5-dev libqt5webenginewidgets5 libqt5webchannel5-dev qtwebengine5-dev libglu1-mesa-dev libfreetype6-dev libfontconfig1-dev libssl-dev libdbus-1-dev libsm-dev libqt5script5 libqt5script5 libqt5concurrent5t64
+```
+
+## Configure & Compile QCAD
+
+Under `wayland` I got `egl` related error while launching QCAD. Resolved via prepending `QT_QPA_PLATFORM=xcb` as [instructed here](https://github.com/flathub/net.sourceforge.Chessx/issues/5#issuecomment-568793891)
+```
+cd ~/qcad
+qmake -r CONFIG+=ractivated
+make release
+cd release
+QT_QPA_PLATFORM=xcb LD_LIBRARY_PATH=. ./qcad-bin
 ```
