@@ -113,3 +113,7 @@ StartupNotify=true
 ## Precompiled archive Pro Edition Trial
 Mentioned in [this thread](https://www.qcad.org/rsforum/viewtopic.php?t=11239) is the trial version. I successfully launched it under Armbian; bit sluggish though
 > https://qcad.org/archives/qcad/qcad-3.31.2.5-trial-linux-qt6-arm64.tar.gz
+
+# Reclaim some space
+Remove pacakages not needed after build
+`sudo apt remove libqt5designer5 && sudo apt autoremove -y`
