@@ -33,7 +33,7 @@ chmod +x launch.sh
 sudo ln -s <full-path>/launch.sh /usr/local/bin/sqlitestudio # use pwd to get full absolute path
 nano /usr/local/share/applications/sqlitestudio.dekstop
 ```
-contents of `.dekstop` file; change `Icon` location
+contents of `.desktop` file; change `Icon` location
 ```
 [Desktop Entry]
 Name=SQLite Studio
