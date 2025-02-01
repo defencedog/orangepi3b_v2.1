@@ -1,4 +1,6 @@
 ## Host Machine
+Took ~2.5 hours to compile & packing a portable version
+
 ```
 OS: Armbian 24.11.3 noble aarch64 
 Host: Rockchip RK3566 OPi 3B 
