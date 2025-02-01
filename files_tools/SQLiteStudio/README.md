@@ -27,8 +27,22 @@ Memory: 1714MiB / 3919MiB
 > Automatic compilation (recommended)
 
 ## Ease of Access
-Download & place `launch.sh` in the SQLiteStudio folder. Do following to launch application from anywhere via terminal
+Download & place `launch.sh` in the SQLiteStudio folder. Do following to launch application from anywhere via terminal or make a desktop shortcut
 ```
 chmod +x launch.sh
 sudo ln -s <full-path>/launch.sh /usr/local/bin/sqlitestudio # use pwd to get full absolute path
+nano /usr/local/share/applications/sqlitestudio.dekstop
+```
+contents of `.dekstop` file; change `Icon` location
+```
+Desktop Entry]
+Name=SQLite Studio
+Comment=Studio for SQLite is a light GUI editor for SQLite databases
+Exec=sqlitestudio
+Icon=/home/ukhan/Binaries/SQLiteStudio/sqlitestudio.png
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Categories=Development;Utility;Database;
+MimeType=application/vnd.db4s-project+xml;application/sqlitestudio;application/x-sqlitestudio;application/vnd.sqlite3;application/geopackage+sqlite3;application/x-sqlite2;application/x-sqlite3;
 ```
