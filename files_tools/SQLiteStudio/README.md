@@ -31,7 +31,7 @@ Download & place `launch.sh` in the SQLiteStudio folder. Do following to launch 
 ```
 chmod +x launch.sh
 sudo ln -s <full-path>/launch.sh /usr/local/bin/sqlitestudio # use pwd to get full absolute path
-nano /usr/local/share/applications/sqlitestudio.dekstop
+nano /usr/local/share/applications/sqlitestudio.desktop
 ```
 contents of `.desktop` file; change `Icon` location
 ```
