@@ -35,7 +35,7 @@ nano /usr/local/share/applications/sqlitestudio.dekstop
 ```
 contents of `.dekstop` file; change `Icon` location
 ```
-Desktop Entry]
+[Desktop Entry]
 Name=SQLite Studio
 Comment=Studio for SQLite is a light GUI editor for SQLite databases
 Exec=sqlitestudio
