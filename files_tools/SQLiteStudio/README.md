@@ -39,7 +39,7 @@ contents of `.desktop` file; change `Icon` location
 Name=SQLite Studio
 Comment=Studio for SQLite is a light GUI editor for SQLite databases
 Exec=sqlitestudio
-Icon=/home/ukhan/Binaries/SQLiteStudio/sqlitestudio.png
+Icon=<full-path>/sqlitestudio.png
 Terminal=false
 X-MultipleArgs=false
 Type=Application
