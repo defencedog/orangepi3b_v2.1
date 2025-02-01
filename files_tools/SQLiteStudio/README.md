@@ -25,3 +25,10 @@ Memory: 1714MiB / 3919MiB
 ## Build Instructions
 [Official Link](https://github.com/pawelsalawa/sqlitestudio/wiki/Instructions_for_compilation_under_Linux)
 > Automatic compilation (recommended)
+
+## Ease of Access
+Download & place `launch.sh` in the SQLiteStudio folder. Do following to launch application from anywhere via terminal
+```
+chmod +x launch.sh
+sudo ln -s <full-path>/launch.sh /usr/local/bin/sqlitestudio # use pwd to get full absolute path
+```
