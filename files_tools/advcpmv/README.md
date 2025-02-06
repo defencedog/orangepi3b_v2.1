@@ -7,10 +7,13 @@ Replace `mv` & `cp` bash commands with binaries supporting progress bar
 >https://github.com/jarun/advcpmv
 
 
-### Direct use
+### Direct use**
 ```
 sudo mv ./advcpmv/advcp /usr/local/bin/
 sudo mv ./advcpmv/advmv /usr/local/bin/
-echo alias cp '/usr/local/bin/advcp -g' >> ~/.bashrc
-echo alias mv '/usr/local/bin/advmv -g' >> ~/.bashrc
+echo -e 'alias cp=\x27/usr/local/bin/advcp -g\x27' >> ~/.bashrc
+echo -e 'alias mv=\x27/usr/local/bin/advmv -g\x27' >> ~/.bashrc
 ```
+
+** 
+> https://github.com/jarun/advcpmv/issues/41#issue-2836544536
