@@ -39,12 +39,10 @@ cd ~/.config/mpv
 nano mpv.conf
 ```
 file contents
-> vo=gpu
-> 
+> profile=fast
+> vo=gpu-next
 > hwdec=rkmpp
->
 > vf=scale_rkrga=force_yuv=8bit
-> 
 > af=lavfi=[loudnorm]
 
 ### Using GUI Celluloid
