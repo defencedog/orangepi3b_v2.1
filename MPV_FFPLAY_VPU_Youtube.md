@@ -39,13 +39,16 @@ cd ~/.config/mpv
 nano mpv.conf
 ```
 file contents
-> vo=gpu
+> profile=fast
+> 
+> vo=gpu-next
 > 
 > hwdec=rkmpp
->
+> 
 > vf=scale_rkrga=force_yuv=8bit
 > 
 > af=lavfi=[loudnorm]
+> 
 
 ### Using GUI Celluloid
 [AskUbuntu comment](https://askubuntu.com/a/1330777) & [program's FAQ](https://celluloid-player.github.io/faq.html) is more than enough...
