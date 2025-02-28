@@ -34,7 +34,9 @@ Select a particular area intuitively via `flameshot gui -g` output will be like
 
 Video size `781x727` & x|y offsets `944+185`
 
-Then you can use `ffmpeg -hwaccel rkmpp -hwaccel_output_format drm_prime -i output-file.mp4 -vf vpp_rkrga=cw=781:ch=727:cx=944:cy=185 -c:v h264_rkmpp -y crop-file.mp4`
+Then you can use 
+
+`ffmpeg -hwaccel rkmpp -hwaccel_output_format drm_prime -i output-file.mp4 -vf vpp_rkrga=cw=781:ch=727:cx=944:cy=185 -c:v h264_rkmpp -y crop-file.mp4`
 
 
 
