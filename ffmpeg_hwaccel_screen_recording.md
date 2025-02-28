@@ -1,6 +1,6 @@
 # Hardware Accelerated screen recording / casting via ffmpeg under Wayland
 
-All commands enetered here are done in `sudo` mode!
+All commands entered here are done in `sudo` mode!
 
 `ffmpeg` in Armbian automatically has `rkmpp` support. More about the Rockchip specific video decoders, encoders & filters available read here
 > https://github.com/hbiyik/ffmpeg-rockchip/wiki/Filter
