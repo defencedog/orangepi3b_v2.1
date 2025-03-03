@@ -45,7 +45,7 @@ _recordscr.sh_
 ```
 #!/bin/bash
 homedir=$( getent passwd "$USER" | cut -d: -f6 )
-dir="$homedir/Videos/Records"
+dir="$homedir/Videos"
 params=$(flameshot gui -g)
 IFS='x+' read width height x y <<< "$params"
 now=`date "+%F_%H-%M-%S"`
