@@ -38,7 +38,24 @@ Then you can use
 
 `ffmpeg -hwaccel rkmpp -hwaccel_output_format drm_prime -i output-file.mp4 -vf vpp_rkrga=cw=781:ch=727:cx=944:cy=185 -c:v h264_rkmpp -y crop-file.mp4`
 
+## Automated Script with screen cropping
+Dont forget to `chmod +x recordscr.sh` & launch via `./recordscr.sh` You can add GNOME keyboard shortcut to this script
 
+_recordscr.sh_
+```
+#!/bin/bash
+homedir=$( getent passwd "$USER" | cut -d: -f6 )
+dir="$homedir/Videos/Records"
+params=$(flameshot gui -g)
+IFS='x+' read width height x y <<< "$params"
+now=`date "+%F_%H-%M-%S"`
+filename0="${dir}/tmp.mp4"
+filename1="${dir}/${now}.mp4"
+sudo ffmpeg -hwaccel rkmpp -hwaccel_output_format drm_prime -device /dev/dri/card0 -framerate 25 -f kmsgrab -i - -c:v h264_rkmpp -y "${filename0}"
+ffmpeg -hwaccel rkmpp -hwaccel_output_format drm_prime -i "${filename0}" -vf vpp_rkrga=cw="$width":ch="$height":cx="$x":cy="$y" -c:v h264_rkmpp -y "${filename1}"
+rm "${filename0}"
+xdg-open "${dir}"
+```
 
 
 
