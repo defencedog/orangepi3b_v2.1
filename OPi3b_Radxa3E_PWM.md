@@ -106,12 +106,14 @@ finally:
     pwm.close()
 ```
 
-Another example *SG90 360degree servo*
+Another example *SG90 360degree servo* on Radxa3E
+
+I used `rk3568-pwm14-m0.dts` to activate PWM at physical PIN 7 corresponding to software device `fe700020`
 > https://protosupplies.com/product/servo-motor-micro-sg90-360-degree-continuous-rotation/
-```
+```python
 from periphery import PWM, sleep_ms
 
-pwm = PWM(0, 0)  #PWM object is initialized for pwmchip2 channel0
+pwm = PWM(0, 0)  #PWM object is initialized for pwmchip0 channel0
 
 try:
     pwm.frequency = 500 #PWM frequency is set to 1000 Hz
