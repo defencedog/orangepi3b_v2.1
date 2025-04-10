@@ -2,7 +2,7 @@
 
 You can mount _samba_ shares within _nautilus_ after installing these tools 
 ```
-sudo apt install smbclient gvfs-backends cifs-utils
+sudo apt install smbclient gvfs-backends cifs-utils winbind
 ```
 however you will not be able to stream media from _smplayer_ or _vlc_ because default `ffmpeg` is not compiled with _smb_ protocol support.
 
