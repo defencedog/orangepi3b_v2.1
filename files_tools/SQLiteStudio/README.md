@@ -20,7 +20,7 @@ Memory: 1714MiB / 3919MiB
 ```
 
 ## Dependencies
-`sudo apt install -y qttools5-dev chrpath tcl-dev qttools5-dev-tools libreadline-dev`
+`sudo apt install -y qttools5-dev chrpath tcl-dev qttools5-dev-tools libreadline-dev libsqlite3-dev qtdeclarative5-dev`
 
 ## Build Instructions
 [Official Link](https://github.com/pawelsalawa/sqlitestudio/wiki/Instructions_for_compilation_under_Linux)
