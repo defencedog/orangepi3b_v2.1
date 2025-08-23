@@ -5,9 +5,12 @@ sudo apt install dotnet-runtime-8.0
 7z x pinta_build.7z
 cd pinta_build
 nano /bin/pinta
+# at the top add x2 lines
+> export DOTNET_ROOT=$HOME/dotnet
+> export PATH=$PATH:$HOME/dotnet
 # edit this line
 > prefix=/usr/local
-# move all folder to $PREFIX/local
+# copy all folder to $PREFIX/local
 sudo cp -R * /usr/local
 ```
 
