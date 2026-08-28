@@ -5,6 +5,32 @@ Video: https://www.youtube.com/shorts/RWdcbzk3DPw
 A self-contained, optimized, offline PDF OCR pipeline running on the **Rockchip RK3566 NPU** (1 TOPS) via `librknnrt` and `rknn-toolkit-lite2`.
 
 ---
+OS
+```
+OS: Armbian 25.5.2 noble aarch64
+Host: Rockchip RK3566 OPi 3B
+Kernel: 6.1.115-vendor-rk35xx
+Uptime: 4 hours, 13 mins
+Packages: 2619 (dpkg)
+Shell: bash 5.2.21
+Resolution: 1024x768
+Terminal: /dev/pts/1
+CPU: (4) @ 1.992GHz
+Memory: 1739MiB / 3911MiB
+```
+My `dmesg` logs show NPU enabled
+```
+[    6.404371] RKNPU fde40000.npu: Adding to iommu group 0
+[    6.404815] RKNPU fde40000.npu: RKNPU: rknpu iommu is enabled, using iommu mode
+[    6.404857] RKNPU fde40000.npu: Looking up rknpu-supply from device tree
+[    6.405030] RKNPU fde40000.npu: Looking up mem-supply from device tree
+[    6.405038] RKNPU fde40000.npu: Looking up mem-supply property in node /npu@fde40000 failed
+[    6.405084] RKNPU fde40000.npu: can't request region for resource [mem 0xfde40000-0xfde4ffff]
+[    6.405122] RKNPU fde40000.npu: error -ENXIO: IRQ npu_irq not found
+[    6.405925] [drm] Initialized rknpu 0.9.8 20240828 for fde40000.npu on minor 1
+```
+
+---
 
 ## ⚡ Highlights
 
