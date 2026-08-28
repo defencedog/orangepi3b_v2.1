@@ -18,7 +18,7 @@ Terminal: /dev/pts/1
 CPU: (4) @ 1.992GHz
 Memory: 1739MiB / 3911MiB
 ```
-My `dmesg` logs show NPU enabled
+My `dmesg` logs show NPU enabled (forget about errors)
 ```
 [    6.404371] RKNPU fde40000.npu: Adding to iommu group 0
 [    6.404815] RKNPU fde40000.npu: RKNPU: rknpu iommu is enabled, using iommu mode
@@ -28,6 +28,16 @@ My `dmesg` logs show NPU enabled
 [    6.405084] RKNPU fde40000.npu: can't request region for resource [mem 0xfde40000-0xfde4ffff]
 [    6.405122] RKNPU fde40000.npu: error -ENXIO: IRQ npu_irq not found
 [    6.405925] [drm] Initialized rknpu 0.9.8 20240828 for fde40000.npu on minor 1
+[    6.406415] RKNPU fde40000.npu: Failed to get specification_serial_number
+[    6.406436] RKNPU fde40000.npu: Failed to get leakage
+[    6.406453] RKNPU fde40000.npu: Looking up rknpu-supply from device tree
+[    6.406486] vdd_npu: could not add device link fde40000.npu: -EEXIST
+[    6.406517] RKNPU fde40000.npu: soc version=0, speed=0
+[    6.406567] RKNPU fde40000.npu: Looking up rknpu-supply from device tree
+[    6.406586] debugfs: Directory 'fde40000.npu-rknpu' with parent 'vdd_npu' already present!
+[    6.406592] vdd_npu: Failed to create debugfs directory
+[    6.407189] RKNPU fde40000.npu: avs=0
+[    6.407410] RKNPU fde40000.npu: l=0 h=2147483647 hyst=5000 l_limit=800000000 h_limit=0 h_table=0
 ```
 
 ---
