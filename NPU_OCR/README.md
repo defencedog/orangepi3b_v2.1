@@ -1,5 +1,7 @@
 # PP-OCR on Rockchip RK3566 NPU (1600×1600 PP-OCRv6 + PP-OCRv4 Rec)
 
+Video: https://www.youtube.com/shorts/RWdcbzk3DPw
+
 A self-contained, optimized, offline PDF OCR pipeline running on the **Rockchip RK3566 NPU** (1 TOPS) via `librknnrt` and `rknn-toolkit-lite2`.
 
 ---
