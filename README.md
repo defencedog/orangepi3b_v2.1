@@ -31,8 +31,8 @@ orangepi3b_v2.1/
 ├── tutorials/       # Hardware setup, VPU/GPU acceleration & troubleshooting tutorials
 ├── kernels/         # Production kernels, DTB/DTS configurations & build VM recipes
 ├── hardware/        # Official schematics, pinouts, mechanical diagrams & peripheral drivers
-├── apps/            # Compiled application suites (RKNN NPU OCR, QCAD aarch64, LibreOffice)
-├── files_tools/     # Pre-compiled portable ARM64 CLI and GUI tools
+├── apps/            # Edge AI applications (RKNN NPU OCR suite)
+├── files_tools/     # Pre-compiled portable ARM64 tools, LibreOffice & QCAD packages
 ├── .gitignore       # Repository exclusion rules
 └── README.md        # Master documentation (this file)
 ```
@@ -63,7 +63,6 @@ Comprehensive guides for tuning, configuring, and accelerating your board:
 Verified kernel releases, device trees, and build environments:
 - [**Armbian Noble Kernel 6.1.75**](./kernels/Armbian_Noble_rk6.1.75/): Production DTB and DTS files for Ubuntu 24.04 (Noble) with v2.1 board support.
 - [**MicroLinux Jammy Edge Kernel 6.6.4**](./kernels/MicroLinux_jammy_edge_6.6.4/): Mainline Linux 6.6.4 edge build with patched device trees.
-- [**Rockchip BSP Kernel 5.10.160 with Panfrost**](./kernels/rk3566-5.10.160-panfrost/): Stable vendor kernel with full VPU acceleration, Panfrost GPU, and prebuilt deb packages.
 - [**Build System VM Guide**](./kernels/Create_Build_System_VM/): Setting up a dedicated virtual machine for cross-compiling Armbian.
 
 ---
@@ -76,16 +75,16 @@ Official engineering resources and peripheral firmware:
 ---
 
 ### 4. [Applications & AI Suites (`apps/`)](./apps/)
-Self-contained edge AI and productivity applications:
+Edge AI applications:
 - [**NPU OCR Suite (RKNN)**](./apps/NPU_OCR/): PaddleOCR pipeline accelerated via the 1.0 TOPS RKNN NPU with real-time hardware telemetry and Recoll desktop search integration.
-- [**QCAD 3.31.2 for ARM64**](./apps/QCAD_aarch64/): Full 2D CAD application compiled natively for 64-bit ARM Linux.
-- [**LibreOffice Engineering Extensions**](./apps/LibreOffice/): LibreBase SQLite3 ODBC connector, CoolProp thermodynamic tables, and nonlinear NLP solvers.
 
 ---
 
-### 5. [Portable Utilities (`files_tools/`)](./files_tools/)
-Pre-built portable ARM64 binaries and tools:
-- Includes `7z`, `advcpmv`, `cpdf`, `dumptorrent`, `geogebra5`, `jfilesync`, `lf`, `markpad`, `PdfMerger`, `pinta2.2.2_dotnet8`, `ripgrep-all`, `SQLiteStudio`, and overclocked DTB variants.
+### 5. [Portable Utilities & Prebuilts (`files_tools/`)](./files_tools/)
+Pre-built portable ARM64 binaries, packages, and engineering tools:
+- [**LibreOffice Engineering Extensions**](./files_tools/LibreOffice/): LibreBase SQLite3 ODBC connector, CoolProp thermodynamic tables, and nonlinear NLP solvers.
+- [**QCAD 3.31.2 for ARM64**](./files_tools/QCAD_Compiling_Armbian_aarch64/): Full 2D CAD application compiled natively for 64-bit ARM Linux (multi-part 7z).
+- **CLI & GUI Tools:** Includes `7z`, `advcpmv`, `cpdf`, `dumptorrent`, `geogebra5`, `jfilesync`, `lf`, `markpad`, `PdfMerger`, `pinta2.2.2_dotnet8`, `ripgrep-all`, `SQLiteStudio`, and overclocked DTB variants.
 
 ---
 
