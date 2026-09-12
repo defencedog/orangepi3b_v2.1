@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+
+# Packages & Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# System & Editor Files
+.DS_Store
+*.swp
+*~

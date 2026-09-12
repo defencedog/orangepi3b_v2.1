@@ -46,7 +46,7 @@ Use `dconf-editor` to disable animations in GNOME. Use _extension-manager_ GUI t
 sudo apt install diff meld mousepad featherpad
 ```
 ## GPU / VPU Performance
-Use `apt-cache policy ffmpeg mpv` to ensure they are installed from a [specific ppa](https://launchpad.net/~liujianfeng1994/+archive/ubuntu/rockchip-multimedia) [Configure media players](https://github.com/defencedog/orangepi3b_v2.1/blob/main/MPV_FFPLAY_VPU_Youtube.md) for HW accelerated video playback 
+Use `apt-cache policy ffmpeg mpv` to ensure they are installed from a [specific ppa](https://launchpad.net/~liujianfeng1994/+archive/ubuntu/rockchip-multimedia) [Configure media players](https://github.com/defencedog/orangepi3b_v2.1/blob/main/tutorials/MPV_FFPLAY_VPU_Youtube.md) for HW accelerated video playback 
 
 ```
 sudo apt install glmark2 glmark2-es2-wayland
@@ -73,4 +73,4 @@ cd "${HERE}"
 export MONO_WINFORMS_XIM_STYLE=disabled
 GTK2_RC_FILES=/usr/share/themes/Raleigh/gtk-2.0/gtkrc exec mono "${HERE}//Solver.exe" "$@"
 ```
-See also [Libreoffice engineering](https://github.com/defencedog/orangepi3b_v2.1/tree/main/LibreOffice) extensions in this repo
+See also [Libreoffice engineering](https://github.com/defencedog/orangepi3b_v2.1/tree/main/apps/LibreOffice) extensions in this repo

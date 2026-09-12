@@ -1,5 +1,5 @@
 # How to provide boot logs for inspection?
-OPi3b has 3pin Debug serial port thus best to use tty serial console buy one immediately! Go to section _How to use the debugging serial port_ in this [pdf manual](https://github.com/defencedog/orangepi3b_v2.1/blob/main/manuals/Orange%20Pi%203B%20-%20Wiki-Orange%20Pi.pdf)
+OPi3b has 3pin Debug serial port thus best to use tty serial console buy one immediately! Go to section _How to use the debugging serial port_ in this [pdf manual](https://github.com/defencedog/orangepi3b_v2.1/blob/main/hardware/manuals/Orange%20Pi%203B%20-%20Wiki-Orange%20Pi.pdf)
 
 ## Best solution
 Verbosity levels are explained below `4` is OK enough then tty serial console can be used to debug SBC
